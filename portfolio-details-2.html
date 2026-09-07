@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%234e65ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'%3E%3C/path%3E%3Cpolyline points='3.27 6.96 12 12.01 20.73 6.96'%3E%3C/polyline%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E">
+    <title>Portfolio Details | Premium Agency Template</title>
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/rtl.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="clay-header py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand fw-bold fs-4" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</a>
+                <div class="d-flex align-items-center gap-2 gap-lg-3 ms-auto me-2 me-lg-0 order-lg-3">
+                        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                            <i class="bi bi-moon"></i>
+                        </button>
+                        <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
+                            <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
+                        </button>
+                        <a href="login.html" class="clay-btn d-none d-lg-inline-flex unauth-link px-4">Login</a>
+                        <a href="register.html" class="clay-btn clay-btn-primary d-none d-lg-inline-flex unauth-link px-4">Sign Up</a>
+                    </div>
+                <button class="navbar-toggler theme-toggle ms-1 order-lg-4 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+                <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li><li><a class="dropdown-item" href="home-2.html">Home 2 (Saas)</a></li></ul></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 140px;">
+        <section class="py-5">
+            <div class="container text-center" data-aos="fade-up">
+                <nav aria-label="breadcrumb" class="mb-4 d-flex justify-content-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="portfolio.html" class="text-decoration-none text-muted-clay">Portfolio</a></li>
+                        <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">Global SaaS Campaign</li>
+                    </ol>
+                </nav>
+                <h1 class="heading-xl mb-5">GLOBAL SAAS CAMPAIGN</h1>
+                <img src="./assets/portfolio-2.jpg" alt="Global SaaS Campaign Hero" class="img-fluid w-100 mb-5" style="height: 500px; object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer);">
+            </div>
+        </section>
+
+        <section class="py-4 border-bottom border-secondary-subtle">
+            <div class="container">
+                <div class="row g-4 text-center text-md-start" data-aos="fade-up">
+                    <div class="col-6 col-md-3">
+                        <span class="text-muted-clay small fw-semibold d-block mb-1">CLIENT</span>
+                        <span class="fw-bold fs-5">CloudSync Data</span>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <span class="text-muted-clay small fw-semibold d-block mb-1">INDUSTRY</span>
+                        <span class="fw-bold fs-5">Software / SaaS</span>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <span class="text-muted-clay small fw-semibold d-block mb-1">SERVICES</span>
+                        <span class="fw-bold fs-5">PPC, Meta Ads, Google Ads</span>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <span class="text-muted-clay small fw-semibold d-block mb-1">WEBSITE</span>
+                        <a href="#" class="fw-bold fs-5 text-primary text-decoration-none">cloudsync.io</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8" data-aos="fade-right">
+                        <h3 class="fw-bold mb-4">Project Overview</h3>
+                        <p class="text-muted-clay fs-5 mb-4">CloudSync needed a massive push for their new enterprise tier. We crafted a targeted multi-channel advertising campaign spanning Meta, Google, and LinkedIn that drove a 300% increase in qualified enterprise leads within three months.</p>
+                        
+                        <h4 class="fw-bold mt-5 mb-3">The Challenge</h4>
+                        <p class="text-muted-clay mb-4">Breaking into the enterprise market required reaching C-suite decision makers across multiple touchpoints. The existing organic strategy wasn't generating enough high-value leads, and ad spend was being wasted on unqualified traffic from broad targeting.</p>
+                        
+                        <h4 class="fw-bold mt-5 mb-3">The Solution</h4>
+                        <p class="text-muted-clay mb-5">We built hyper-targeted audience segments using LinkedIn job title data, implemented retargeting funnels across Meta and Google Display, and created compelling video ad creatives that showcased real customer success stories. A/B testing was continuous to optimize ROAS.</p>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <img src="./assets/Ads.jpg" alt="Campaign Dashboard" class="img-fluid w-100" style="height: 250px; object-fit: cover; border-radius: var(--clay-radius); box-shadow: var(--clay-shadow-outer);">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="./assets/Global SaaS Campaign.jpg" alt="Ad Creatives" class="img-fluid w-100" style="height: 250px; object-fit: cover; border-radius: var(--clay-radius); box-shadow: var(--clay-shadow-outer);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-left">
+                        <div class="clay-card p-4 p-md-5 text-center">
+                            <h4 class="fw-bold mb-4">The Results</h4>
+                            
+                            <div class="mb-4">
+                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);">3x</h2>
+                                <span class="text-muted-clay fw-semibold">Return on Ad Spend</span>
+                            </div>
+                            <div class="mb-4">
+                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);">+300%</h2>
+                                <span class="text-muted-clay fw-semibold">Enterprise Leads</span>
+                            </div>
+                            <div>
+                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);">-55%</h2>
+                                <span class="text-muted-clay fw-semibold">Cost Per Acquisition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section text-center py-5">
+            <div class="container">
+                <div class="clay-card py-5 px-3 px-md-5 mx-auto" style="max-width: 900px;" data-aos="zoom-in">
+                    <h2 class="heading-xl mb-4">NEED A CAMPAIGN LIKE THIS?</h2>
+                    <p class="fs-5 text-muted-clay mb-5">Let's discuss how we can help you reach your target audience and maximize your ad spend.</p>
+                    <a href="contact.html" class="clay-btn clay-btn-primary">START A PROJECT</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="clay-footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 pe-lg-5">
+                    <a class="navbar-brand fw-bold fs-4 d-block mb-4" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</a>
+                    <p class="text-muted-clay mb-4">A premium web design and digital marketing agency dedicated to growing ambitious brands.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://dribbble.com/session/new" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4 fw-bold">Company</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="about.html" class="text-muted-clay text-decoration-none">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-muted-clay text-decoration-none">Portfolio</a></li>
+                        <li><a href="pricing.html" class="text-muted-clay text-decoration-none">Pricing</a></li>
+                        <li><a href="contact.html" class="text-muted-clay text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5 class="mb-4 fw-bold">Services</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="service-details.html" class="text-muted-clay text-decoration-none">Web Design</a></li>
+                        <li><a href="service-details-2.html" class="text-muted-clay text-decoration-none">Web Development</a></li>
+                        <li><a href="service-details-3.html" class="text-muted-clay text-decoration-none">SEO Optimization</a></li>
+                        <li><a href="service-details-5.html" class="text-muted-clay text-decoration-none">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4 fw-bold">Newsletter</h5>
+                    <p class="text-muted-clay mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="d-flex flex-column gap-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" class="clay-input" placeholder="Email address" required>
+                        <button type="submit" class="clay-btn clay-btn-primary w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row pt-4 border-top" style="border-color: var(--clr-border) !important;">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-muted-clay">&copy; 2026 NEXOVA All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted-clay text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted-clay text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

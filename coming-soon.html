@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%234e65ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'%3E%3C/path%3E%3Cpolyline points='3.27 6.96 12 12.01 20.73 6.96'%3E%3C/polyline%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E">
+    <title>Coming Soon | Premium Agency Template</title>
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/rtl.css" rel="stylesheet">
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100 text-center">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <a class="navbar-brand fw-bold fs-2 mb-5 d-block" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</a>
+                
+                <h1 class="heading-xl mb-4">COMING SOON</h1>
+                <p class="fs-4 text-muted-clay mb-5">Something amazing is coming. We are building a new digital experience.</p>
+                
+                <div class="d-flex justify-content-center gap-3 gap-md-4 mb-5">
+                    <div class="clay-card p-3 p-md-4 text-center" style="width: 100px;">
+                        <h2 class="fw-bold text-primary mb-1" id="days">00</h2>
+                        <span class="small text-muted-clay fw-semibold">Days</span>
+                    </div>
+                    <div class="clay-card p-3 p-md-4 text-center" style="width: 100px;">
+                        <h2 class="fw-bold text-primary mb-1" id="hours">00</h2>
+                        <span class="small text-muted-clay fw-semibold">Hours</span>
+                    </div>
+                    <div class="clay-card p-3 p-md-4 text-center" style="width: 100px;">
+                        <h2 class="fw-bold text-primary mb-1" id="minutes">00</h2>
+                        <span class="small text-muted-clay fw-semibold">Mins</span>
+                    </div>
+                    <div class="clay-card p-3 p-md-4 text-center" style="width: 100px;">
+                        <h2 class="fw-bold text-primary mb-1" id="seconds">00</h2>
+                        <span class="small text-muted-clay fw-semibold">Secs</span>
+                    </div>
+                </div>
+                
+                <form class="d-flex gap-3 justify-content-center mx-auto" style="max-width: 500px;" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <input type="email" class="clay-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="clay-btn clay-btn-primary">Notify Me</button>
+                </form>
+
+                <div class="text-center mt-5">
+                    <button id="themeToggle" class="theme-toggle mx-auto" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        // Simple countdown logic
+        const countDownDate = new Date().getTime() + (14 * 24 * 60 * 60 * 1000); // 14 days from now
+        
+        setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            document.getElementById("days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

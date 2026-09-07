@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%234e65ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'%3E%3C/path%3E%3Cpolyline points='3.27 6.96 12 12.01 20.73 6.96'%3E%3C/polyline%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E">
+    <title>Register | Premium Agency Template</title>
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/rtl.css" rel="stylesheet">
+</head>
+<body class="d-flex align-items-center min-vh-100 py-5">
+    <div class="position-absolute top-0 end-0 p-4 d-flex gap-3">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="bi bi-moon"></i>
+        </button>
+        <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
+            <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
+        </button>
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5">
+                <div class="text-center mb-5">
+                    <a class="navbar-brand fw-bold fs-3" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</a>
+                </div>
+                
+                <div class="clay-card p-4 p-md-5">
+                    <h3 class="fw-bold mb-2 text-center">Create an Account</h3>
+                    <p class="text-muted-clay text-center mb-4">Join our agency client portal</p>
+                    
+                    <form id="registerForm">
+                        <div class="mb-4">
+                            <label class="form-label text-muted-clay small fw-semibold">Full Name</label>
+                            <input type="text" class="clay-input" id="regName" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted-clay small fw-semibold">Email Address</label>
+                            <input type="email" class="clay-input" id="regEmail" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted-clay small fw-semibold">Password</label>
+                            <input type="password" class="clay-input" id="regPassword" required>
+                        </div>
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="terms" required>
+                            <label class="form-check-label text-muted-clay small" for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                        </div>
+                        <button type="submit" class="clay-btn clay-btn-primary w-100 py-3">REGISTER</button>
+                    </form>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-muted-clay small mb-0">Already have an account? <a href="login.html" class="fw-bold text-decoration-none">Login here</a></p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            
+            // Save to localStorage
+            const user = { name: name, email: email, password: password };
+            localStorage.setItem('agency_user', JSON.stringify(user));
+            
+            // Navigate to login page
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

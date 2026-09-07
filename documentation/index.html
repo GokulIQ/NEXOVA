@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%234e65ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'%3E%3C/path%3E%3Cpolyline points='3.27 6.96 12 12.01 20.73 6.96'%3E%3C/polyline%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E">
+    <title>Agency Template Documentation</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        .sidebar { position: fixed; top: 0; left: 0; height: 100vh; width: 250px; background: #fff; padding: 2rem; overflow-y: auto; border-right: 1px solid #e9ecef; }
+        .content { margin-left: 250px; padding: 3rem; max-width: 900px; background: #fff; min-height: 100vh; }
+        pre { background: #2d3436; color: #f8f9fa; padding: 1rem; border-radius: 8px; }
+        .alert-warning { background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h4 class="mb-4 fw-bold">Agency Template</h4>
+        <ul class="nav flex-column gap-2">
+            <li><a href="#intro" class="text-decoration-none text-dark">1. Introduction</a></li>
+            <li><a href="#structure" class="text-decoration-none text-dark">2. Folder Structure</a></li>
+            <li><a href="#claymorphism" class="text-decoration-none text-dark">3. Claymorphism UI</a></li>
+            <li><a href="#darkmode" class="text-decoration-none text-dark">4. Dark Mode</a></li>
+            <li><a href="#rtl" class="text-decoration-none text-dark">5. RTL Support</a></li>
+            <li><a href="#auth" class="text-decoration-none text-dark">6. Authentication Note</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1 class="mb-5">Agency Template Documentation</h1>
+        
+        <section id="intro" class="mb-5">
+            <h2>1. Introduction</h2>
+            <p>Welcome to the Agency Premium HTML Template. Built with HTML5, CSS3, Vanilla JS, and Bootstrap 5, it features a modern <strong>Claymorphism</strong> design system. It is 100% frontend and requires no backend dashboard.</p>
+        </section>
+
+        <section id="structure" class="mb-5">
+            <h2>2. Folder Structure</h2>
+            <pre>
+agency-template/
+├── assets/
+│   ├── css/ (style.css, dark.css, rtl.css, responsive.css, bootstrap)
+│   ├── js/  (main.js, theme.js, storage.js, bootstrap)
+│   ├── images/
+│   └── fonts/
+├── index.html (Home 1)
+├── home-2.html (Home 2)
+├── portfolio.html
+├── contact.html
+├── login.html
+└── documentation/
+            </pre>
+        </section>
+
+        <section id="claymorphism" class="mb-5">
+            <h2>3. Claymorphism UI & Colors</h2>
+            <p>The design system is controlled via CSS variables in <code>assets/css/style.css</code>. To change the primary color or the clay shadows, edit the <code>:root</code> variables:</p>
+            <pre>
+:root {
+    --clr-primary: #4e65ff;
+    --clay-radius: 24px;
+    --clay-card-shadow: 8px 8px 16px rgba(...), inset 2px 2px 4px rgba(...);
+}
+            </pre>
+        </section>
+
+        <section id="darkmode" class="mb-5">
+            <h2>4. Dark Mode</h2>
+            <p>Dark mode is toggled via Vanilla JS in <code>theme.js</code> and persists via <code>localStorage</code>. It applies a <code>data-theme="dark"</code> attribute to the HTML tag. You can override colors in the <code>[data-theme="dark"]</code> block in CSS.</p>
+        </section>
+
+        <section id="rtl" class="mb-5">
+            <h2>5. RTL Support</h2>
+            <p>RTL is fully supported. Toggling RTL adds <code>dir="rtl"</code> to the HTML element. Custom overrides for margins and paddings are located in <code>assets/css/rtl.css</code>.</p>
+        </section>
+
+        <section id="auth" class="mb-5">
+            <h2>6. Authentication Note</h2>
+            <div class="alert-warning">
+                <strong>IMPORTANT:</strong> Login, registration, and localStorage functionality included in this template are frontend demonstrations only. Production authentication must be implemented using secure server-side authentication. There is no admin dashboard included in this template.
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

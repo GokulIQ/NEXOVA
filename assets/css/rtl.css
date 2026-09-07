@@ -1,0 +1,43 @@
+/* 
+ * Premium Agency HTML Template
+ * RTL Support 
+ */
+
+html[dir="rtl"] {
+    text-align: right;
+}
+
+html[dir="rtl"] .me-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+html[dir="rtl"] .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+html[dir="rtl"] .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+html[dir="rtl"] .me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+/* Clay Button Icons */
+html[dir="rtl"] .clay-btn i.bi-arrow-right {
+    transform: scaleX(-1);
+}
+
+/* Offcanvas */
+html[dir="rtl"] .offcanvas-end {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+}
+html[dir="rtl"] .offcanvas.show {
+    transform: none;
+}

@@ -1,0 +1,90 @@
+/* 
+ * Premium Agency HTML Template
+ * Responsive Optimizations
+ */
+
+/* Breakpoint 1400px+ (XXL) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    .heading-xl {
+        font-size: 4rem;
+    }
+}
+
+/* Breakpoint 1200px+ (XL) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .heading-xl {
+        font-size: 3.5rem;
+    }
+}
+
+/* Breakpoint 992px+ (LG) */
+@media (max-width: 991.98px) {
+    .heading-xl {
+        font-size: 3rem;
+    }
+    section {
+        padding: 80px 0;
+    }
+    .clay-header .navbar-collapse {
+        background: var(--clr-surface);
+        padding: 1.5rem;
+        border-radius: var(--clay-radius);
+        box-shadow: var(--clay-shadow-outer);
+        margin-top: 1rem;
+    }
+}
+
+/* Breakpoint 768px+ (MD) */
+@media (max-width: 767.98px) {
+    .heading-xl {
+        font-size: 2.5rem;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .clay-card {
+        padding: 1.5rem;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Breakpoint 576px+ (SM) */
+@media (max-width: 575.98px) {
+    .heading-xl {
+        font-size: 2.2rem;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .hero-section {
+        text-align: center;
+    }
+    .hero-section .clay-btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Breakpoint 414px, 390px, 375px, 320px (XS Mobile) */
+@media (max-width: 414px) {
+    .heading-xl {
+        font-size: 2rem;
+    }
+    .clay-card {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .heading-xl {
+        font-size: 1.8rem;
+    }
+    .clay-btn {
+        padding: 0.6rem 1rem;
+    }
+}

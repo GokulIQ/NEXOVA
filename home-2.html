@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%234e65ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'%3E%3C/path%3E%3Cpolyline points='3.27 6.96 12 12.01 20.73 6.96'%3E%3C/polyline%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E">
+    <title>Creative Digital Agency | Premium Template</title>
+    <meta name="description" content="We turn ideas into digital experiences.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/rtl.css" rel="stylesheet">
+
+    <style>
+        /* Home 2 Specific Overrides */
+        .home-2-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(circle at top left, rgba(108, 92, 231, 0.25), transparent 60%), radial-gradient(circle at bottom right, rgba(146, 239, 253, 0.15), transparent 50%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .home-2-hero::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            background: var(--clr-primary);
+            border-radius: 50%;
+            filter: blur(150px);
+            opacity: 0.3;
+            z-index: 0;
+            animation: pulse 6s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.2; }
+            100% { transform: scale(1.2); opacity: 0.4; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.6);
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 100%);
+            -webkit-background-clip: text;
+        }
+        
+        [data-theme="light"] .text-outline {
+            -webkit-text-stroke: 2px rgba(0, 0, 0, 0.6);
+            background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+            -webkit-background-clip: text;
+        }
+
+        .text-outline:hover {
+            color: var(--clr-primary);
+            -webkit-text-stroke: 2px var(--clr-primary);
+            transition: all 0.4s ease;
+            text-shadow: 0 0 20px rgba(108, 92, 231, 0.5);
+        }
+
+        .oversized-heading {
+            font-size: clamp(2.2rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+    
+        /* Services Card Compact */
+        .home2-service-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .home2-service-card .service-img {
+            height: 160px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: calc(var(--clay-radius) - 10px);
+            transition: transform 0.5s ease;
+        }
+        .home2-service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+        .home2-service-card .service-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--clr-primary);
+            opacity: 0.15;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="clay-header py-3">
+        <div class="container-fluid px-4 px-lg-5">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand fw-bold fs-4" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</a>
+                
+                <div class="d-flex align-items-center gap-2 gap-lg-3 ms-auto me-2 me-lg-0 order-lg-3">
+                        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                            <i class="bi bi-moon"></i>
+                        </button>
+                        <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
+                            <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
+                        </button>
+                        <a href="login.html" class="clay-btn d-none d-lg-inline-flex unauth-link px-4">Login</a>
+                        <a href="register.html" class="clay-btn clay-btn-primary d-none d-lg-inline-flex unauth-link px-4">Sign Up</a>
+                    </div>
+                <button class="navbar-toggler theme-toggle ms-1 order-lg-4 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li><li><a class="dropdown-item" href="home-2.html">Home 2 (Saas)</a></li></ul></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</h5>
+            <button type="button" class="clay-btn p-2" data-bs-dismiss="offcanvas">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav mb-4">
+                <li class="nav-item dropdown mb-2"><a class="nav-link dropdown-toggle active fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a><ul class="dropdown-menu border-0 bg-transparent shadow-none ps-3"><li><a class="dropdown-item fs-6" href="index.html">Home 1 (Default)</a></li><li><a class="dropdown-item fs-6" href="home-2.html">Home 2 (Saas)</a></li></ul></li>
+                <li class="nav-item"><a class="nav-link fs-5 mb-2" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link fs-5 mb-2" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link fs-5 mb-2" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link fs-5 mb-2" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="home-2-hero">
+            <div class="container-fluid px-4 px-lg-5 hero-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-7" data-aos="fade-up">
+                        <h1 class="oversized-heading fw-bold mb-4">
+                            WE TURN <span class="text-primary">IDEAS</span><br>
+                            <span class="text-outline">INTO DIGITAL</span><br>
+                            EXPERIENCES.
+                        </h1>
+                        <p class="fs-5 text-muted-clay mb-4 pe-lg-5">A creative digital agency focused on branding, UI/UX design, and cutting-edge web development.</p>
+                        <a href="portfolio.html" class="clay-btn clay-btn-primary mt-3">EXPLORE OUR WORK</a>
+                    </div>
+                    <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                        <div class="position-relative">
+                            <div class="clay-card position-relative z-2" style="height: 450px; background: url('assets/banner2.jpg') center/cover;">
+                            </div>
+                            <div class="clay-card position-absolute p-3 z-3" style="bottom: -20px; left: -30px; width: auto;">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">4.9/5</h6>
+                                        <small class="text-muted-clay">Client Rating</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asymmetric Services -->
+        <section class="py-5">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <h2 class="heading-xl">WHAT WE DO.</h2>
+                    </div>
+                    <div class="col-md-6 text-md-end" data-aos="fade-left">
+                        <p class="text-muted-clay fs-5 mb-0">Specialized services for modern brands.</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Service 1 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/UI_UX & Web Design.jpg" alt="UI/UX Design" class="service-img">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="text-primary fw-semibold small">UI/UX DESIGN</span>
+                                <span class="service-number">01</span>
+                            </div>
+                            <h5 class="fw-bold mb-2">Interface Design</h5>
+                            <p class="text-muted-clay small mb-3 flex-grow-1">Creating intuitive, user-centric interfaces that look beautiful and function flawlessly across all devices.</p>
+                            <a href="service-details.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/Web Development.jpg" alt="Web Development" class="service-img">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="text-primary fw-semibold small">DEVELOPMENT</span>
+                                <span class="service-number">02</span>
+                            </div>
+                            <h5 class="fw-bold mb-2">Web Development</h5>
+                            <p class="text-muted-clay small mb-3 flex-grow-1">Building robust, scalable web applications using modern JavaScript frameworks like React, Next.js, and Node.</p>
+                            <a href="service-details-2.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/SEO & Digital Marketing.jpg" alt="SEO" class="service-img">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="text-primary fw-semibold small">SEO</span>
+                                <span class="service-number">03</span>
+                            </div>
+                            <h5 class="fw-bold mb-2">SEO Optimization</h5>
+                            <p class="text-muted-clay small mb-3 flex-grow-1">Data-driven search engine optimization strategies to rank higher and drive consistent organic traffic growth.</p>
+                            <a href="service-details-3.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/Ads.jpg" alt="Paid Advertising" class="service-img">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="text-primary fw-semibold small">ADVERTISING</span>
+                                <span class="service-number">04</span>
+                            </div>
+                            <h5 class="fw-bold mb-2">Paid Advertising</h5>
+                            <p class="text-muted-clay small mb-3 flex-grow-1">Targeted PPC campaigns on Google, Meta, and LinkedIn to maximize your ROI and reach the right audience.</p>
+                            <a href="service-details-4.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/Marketing.jpg" alt="Social Media Marketing" class="service-img">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="text-primary fw-semibold small">SOCIAL MEDIA</span>
+                                <span class="service-number">05</span>
+                            </div>
+                            <h5 class="fw-bold mb-2">Social Media Marketing</h5>
+                            <p class="text-muted-clay small mb-3 flex-grow-1">Strategic social media management and content creation to grow your brand presence and community engagement.</p>
+                            <a href="service-details-5.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/Global SaaS Campaign.jpg" alt="Brand Strategy" class="service-img">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="text-primary fw-semibold small">BRANDING</span>
+                                <span class="service-number">06</span>
+                            </div>
+                            <h5 class="fw-bold mb-2">Brand Strategy</h5>
+                            <p class="text-muted-clay small mb-3 flex-grow-1">Comprehensive brand identity development including logo design, guidelines, messaging, and visual storytelling.</p>
+                            <a href="service-details-6.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="services.html" class="clay-btn clay-btn-primary">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="clay-footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 pe-lg-5">
+                    <a class="navbar-brand fw-bold fs-4 d-block mb-4" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</a>
+                    <p class="text-muted-clay mb-4">A premium web design and digital marketing agency dedicated to growing ambitious brands.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://dribbble.com/session/new" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4 fw-bold">Company</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="about.html" class="text-muted-clay text-decoration-none">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-muted-clay text-decoration-none">Portfolio</a></li>
+                        <li><a href="pricing.html" class="text-muted-clay text-decoration-none">Pricing</a></li>
+                        <li><a href="contact.html" class="text-muted-clay text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5 class="mb-4 fw-bold">Services</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="service-details.html" class="text-muted-clay text-decoration-none">Web Design</a></li>
+                        <li><a href="service-details-2.html" class="text-muted-clay text-decoration-none">Web Development</a></li>
+                        <li><a href="service-details-3.html" class="text-muted-clay text-decoration-none">SEO Optimization</a></li>
+                        <li><a href="service-details-5.html" class="text-muted-clay text-decoration-none">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4 fw-bold">Newsletter</h5>
+                    <p class="text-muted-clay mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="d-flex flex-column gap-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" class="clay-input" placeholder="Email address" required>
+                        <button type="submit" class="clay-btn clay-btn-primary w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row pt-4 border-top" style="border-color: var(--clr-border) !important;">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-muted-clay">&copy; 2026 NEXOVA All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted-clay text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted-clay text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
