@@ -319,7 +319,7 @@ html[data-theme="dark"] .accordion-button.collapsed::after { filter: invert(1) b
 .navbar-toggler i { pointer-events: none; }
 
 /* QA Audit Global Fixes */
-img, svg, video, canvas, audio, iframe, embed, object {
+img, svg, video, canvas, audio {
     max-width: 100%;
     height: auto;
 }
