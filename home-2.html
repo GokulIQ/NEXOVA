@@ -145,21 +145,27 @@
     </header>
 
     <!-- Mobile Offcanvas Menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title fw-bold"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</h5>
-            <button type="button" class="clay-btn p-2" data-bs-dismiss="offcanvas">
+            <h5 class="offcanvas-title fw-bold" id="mobileMenuLabel"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</h5>
+            <button type="button" class="theme-toggle border-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
                 <i class="bi bi-x-lg"></i>
             </button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav mb-4">
-                <li class="nav-item dropdown mb-2"><a class="nav-link dropdown-toggle active fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a><ul class="dropdown-menu border-0 bg-transparent shadow-none ps-3"><li><a class="dropdown-item fs-6" href="index.html">Home 1 (Default)</a></li><li><a class="dropdown-item fs-6" href="home-2.html">Home 2 (Saas)</a></li></ul></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active fs-5 mb-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li><li><a class="dropdown-item" href="home-2.html">Home 2 (Saas)</a></li></ul></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link fs-5 mb-2" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link fs-5 mb-2" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="contact.html">Contact</a></li>
             </ul>
+            <div class="d-grid gap-3" id="mobileAuthContainer">
+                <a href="login.html" class="clay-btn w-100 unauth-link">Login</a>
+                <a href="register.html" class="clay-btn clay-btn-primary w-100 unauth-link">Sign Up</a>
+            </div>
         </div>
     </div>
 
@@ -378,6 +384,7 @@
     </script>
 </body>
 </html>
+
 
 
 
