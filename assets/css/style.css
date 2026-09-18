@@ -76,15 +76,15 @@
 }
 
 html, body {
-    max-width: 100vw;
-    overflow-x: hidden;
+    
+    
 }
 body {
     background-color: var(--clr-bg);
     color: var(--clr-text);
     font-family: var(--font-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
-    overflow-x: hidden;
+    
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -105,7 +105,7 @@ a:hover {
 
 /* Clay Utilities */
 .clay-card {
-    background: var(--clr-surface);
+    background-color: var(--clr-surface);
     border-radius: var(--clay-radius);
     box-shadow: var(--clay-card-shadow);
     padding: 2rem;
@@ -118,7 +118,7 @@ a:hover {
 }
 
 .clay-btn {
-    background: var(--clr-surface);
+    background-color: var(--clr-surface);
     color: var(--clr-text);
     border: none;
     border-radius: var(--clay-radius-sm);
@@ -167,13 +167,13 @@ a:hover {
 
 /* Input Fields */
 .clay-input {
-    background: var(--clr-surface);
+    background-color: var(--clr-surface);
     border: none;
     border-radius: var(--clay-radius-sm);
     padding: 0.85rem 1.5rem;
     box-shadow: var(--clay-shadow-inner);
     color: var(--clr-text);
-    width: 100%; max-width: 100vw; left: 0;
+    width: 100%;
     outline: none;
     transition: all 0.3s ease;
     font-family: var(--font-primary);
@@ -220,7 +220,7 @@ section {
     border-bottom: 1px solid var(--clr-border);
     position: fixed;
     top: 0;
-    width: 100%; max-width: 100vw; left: 0;
+    width: 100%; left: 0;
     z-index: 1030;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -240,13 +240,13 @@ section {
 }
 .nav-link:hover, .nav-link.active {
     color: var(--clr-primary) !important;
-    background: var(--clr-surface);
+    background-color: var(--clr-surface);
     box-shadow: var(--clay-shadow-inner);
 }
 
 /* Utility controls */
 .theme-toggle {
-    background: var(--clr-surface);
+    background-color: var(--clr-surface);
     border: none;
     width: 40px;
     height: 40px;
@@ -266,7 +266,7 @@ section {
 /* Footer */
 .clay-footer {
     padding: 80px 0 30px;
-    background: var(--clr-surface);
+    background-color: var(--clr-surface);
     border-top: 1px solid var(--clr-border);
     box-shadow: var(--clay-shadow-outer);
     margin-top: 50px;
@@ -275,7 +275,7 @@ section {
 
 /* Clay Dropdown */
 .dropdown-menu {
-    background: var(--clr-surface);
+    background-color: var(--clr-surface);
     border: 1px solid var(--clr-border);
     border-radius: var(--clay-radius-sm);
     box-shadow: var(--clay-shadow-outer);
@@ -317,3 +317,44 @@ html[data-theme="dark"] .accordion-button.collapsed::after { filter: invert(1) b
 /* Hamburger Menu Fixes */
 .navbar-toggler { z-index: 1050 !important; position: relative; }
 .navbar-toggler i { pointer-events: none; }
+
+/* QA Audit Global Fixes */
+img, svg, video, canvas, audio, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Prevent Text Overflow */
+body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* Bootstrap Utility Overrides for Theme Consistency */
+.text-primary { color: var(--clr-primary) !important; }
+.bg-primary { background-color: var(--clr-primary) !important; }
+.bg-surface { background-color: var(--clr-surface) !important; }
+.text-body, .text-dark { color: var(--clr-text) !important; }
+.bg-light { background-color: var(--clr-bg) !important; }
+
+.text-muted { color: var(--clr-text-muted) !important; }
+
+
+/* Form Select Dark Mode Chevron Fix */
+[data-theme="dark"] .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+
+/* Form Check Dark Mode Fix */
+[data-theme="dark"] .form-check-input {
+    background-color: var(--clr-surface);
+    border-color: var(--clr-border);
+}
+[data-theme="dark"] .form-check-input:checked {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+}
+
