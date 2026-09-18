@@ -24,10 +24,12 @@
         .home-2-hero {
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            
             background: radial-gradient(circle at top left, rgba(108, 92, 231, 0.25), transparent 60%), radial-gradient(circle at bottom right, rgba(146, 239, 253, 0.15), transparent 50%);
             position: relative;
             overflow: hidden;
+            padding-top: 120px;
+            padding-bottom: 60px;
         }
         
         .home-2-hero::before {
@@ -46,8 +48,8 @@
         }
         
         @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.2; }
-            100% { transform: scale(1.2); opacity: 0.4; }
+            0% { transform: scale(1); opacity: 0.3; }
+            100% { transform: scale(1.1); opacity: 0.5; }
         }
 
         .hero-content {
@@ -77,7 +79,7 @@
 
         .oversized-heading {
             font-size: clamp(2.2rem, 5vw, 4.5rem);
-            line-height: 1.3;
+            line-height: 1.45;
             letter-spacing: -0.02em;
         }
     
@@ -355,8 +357,8 @@
                     <span class="text-muted-clay">&copy; 2026 NEXOVA All rights reserved.</span>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-muted-clay text-decoration-none me-3">Privacy Policy</a>
-                    <a href="#" class="text-muted-clay text-decoration-none">Terms of Service</a>
+                    <a href="#" class="text-muted-clay text-decoration-none me-3"></a>
+                    <a href="#" class="text-muted-clay text-decoration-none"></a>
                 </div>
             </div>
         </div>
