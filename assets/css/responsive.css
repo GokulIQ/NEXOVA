@@ -20,6 +20,16 @@
     }
 }
 
+/* Custom fix for services text wrapping on LG devices */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .services-section .clay-card h4.text-nowrap {
+        font-size: 1.1rem;
+    }
+    .services-section .clay-card {
+        padding: 1.5rem;
+    }
+}
+
 /* Breakpoint 992px+ (LG) */
 @media (max-width: 991.98px) {
     .heading-xl {

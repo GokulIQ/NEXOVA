@@ -87,9 +87,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: var(--font-heading);
     font-weight: 700;
+    line-height: 1.5;
 }
 
 a {
@@ -190,7 +191,7 @@ a:hover {
 }
 .heading-xl {
     font-size: clamp(2.5rem, 5vw, 5rem);
-    line-height: 1.1;
+    line-height: 1.3;
     letter-spacing: -0.02em;
 }
 
@@ -308,3 +309,11 @@ html[data-theme="dark"] .offcanvas-header .btn-close { filter: invert(1) graysca
 .accordion-button:not(.collapsed) { color: var(--clr-primary) !important; }
 html[data-theme="dark"] .accordion-button.collapsed::after { filter: invert(1) brightness(200%); }
 
+
+/* Hamburger Menu Fixes */
+.navbar-toggler { z-index: 1050; position: relative; }
+.navbar-toggler i { pointer-events: none; }
+
+/* Hamburger Menu Fixes */
+.navbar-toggler { z-index: 1050 !important; position: relative; }
+.navbar-toggler i { pointer-events: none; }
