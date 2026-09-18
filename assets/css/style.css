@@ -358,3 +358,24 @@ body {
     border-color: var(--clr-primary);
 }
 
+
+/* Fix horizontal scroll without breaking sticky */
+html, body {
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+
+/* Badge Traffic Responsive */
+.badge-traffic {
+    bottom: -20px;
+    left: -30px;
+    width: auto;
+}
+@media (max-width: 767.98px) {
+    .badge-traffic {
+        left: 10px;
+        bottom: -10px;
+    }
+}
+
