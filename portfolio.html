@@ -39,8 +39,7 @@
                         <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
                             <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
                         </button>
-                        <a href="login.html" class="clay-btn d-none d-xl-inline-flex unauth-link px-4">Login</a>
-                        <a href="register.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex unauth-link px-4">Sign Up</a>
+                        <a href="contact.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex px-4">Start a Project</a>
                     </div>
                 <button class="navbar-toggler theme-toggle d-xl-none ms-1 order-xl-4 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                     <i class="bi bi-list fs-4"></i>
@@ -78,9 +77,8 @@
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="contact.html">Contact</a></li>
             </ul>
-            <div class="d-grid gap-3" id="mobileAuthContainer">
-                <a href="login.html" class="clay-btn w-100 unauth-link">Login</a>
-                <a href="register.html" class="clay-btn clay-btn-primary w-100 unauth-link">Sign Up</a>
+            <div class="d-grid gap-3">
+                <a href="contact.html" class="clay-btn clay-btn-primary w-100">Start a Project</a>
             </div>
         </div>
     </div>
@@ -109,106 +107,119 @@
                     <button class="clay-btn" data-filter="marketing">MARKETING</button>
                 </div>
 
-                <!-- Grid -->
+                                <!-- Grid -->
                 <div class="row g-4" id="portfolio-grid">
     
     <!-- Item 1 -->
     <div class="col-md-6 col-lg-4 portfolio-item" data-category="web-design development">
-        <div class="clay-card p-2 h-100 d-flex flex-column">
-            <div class="overflow-hidden mb-3 position-relative" style="border-radius: calc(var(--clay-radius) - 10px);">
-                <img src="./assets/portfolio-1.jpg" alt="Fintech App" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-overlay" style="transition: opacity 0.3s;">
-                    <a href="portfolio-details.html" class="clay-btn clay-btn-primary">View Project</a>
-                </div>
+        <div class="clay-card p-0 h-100 d-flex flex-column" style="overflow: hidden;">
+            <div class="position-relative" style="border-radius: var(--clay-radius-sm) var(--clay-radius-sm) 0 0;">
+                <img src="./assets/service_ui_ux.jpg" alt="Fintech App" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
             </div>
-            <div class="p-2">
-                <span class="text-primary fw-semibold small">WEB DESIGN</span>
-                <h4 class="mb-0 mt-1">Fintech App Redesign</h4>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-primary fw-bold small">WEB DESIGN & UI/UX</span>
+                    <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Figma / React</span>
+                </div>
+                <h4 class="mb-3 fw-bold">Fintech App Redesign</h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">A complete overhaul of a legacy financial dashboard. We improved user flows, simplified complex data visualization, and implemented a modern dark-mode aesthetic resulting in a 40% increase in user retention.</p>
+                <a href="portfolio-details.html" class="clay-btn clay-btn-primary w-100 text-center">View Project Details</a>
             </div>
         </div>
     </div>
 
     <!-- Item 2 -->
     <div class="col-md-6 col-lg-4 portfolio-item" data-category="marketing branding">
-        <div class="clay-card p-2 h-100 d-flex flex-column">
-            <div class="overflow-hidden mb-3 position-relative" style="border-radius: calc(var(--clay-radius) - 10px);">
-                <img src="./assets/portfolio-2.jpg" alt="SaaS Campaign" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-overlay" style="transition: opacity 0.3s;">
-                    <a href="portfolio-details-2.html" class="clay-btn clay-btn-primary">View Project</a>
-                </div>
+        <div class="clay-card p-0 h-100 d-flex flex-column" style="overflow: hidden;">
+            <div class="position-relative" style="border-radius: var(--clay-radius-sm) var(--clay-radius-sm) 0 0;">
+                <img src="./assets/service_ads.jpg" alt="SaaS Campaign" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
             </div>
-            <div class="p-2">
-                <span class="text-primary fw-semibold small">MARKETING</span>
-                <h4 class="mb-0 mt-1">Global SaaS Campaign</h4>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-primary fw-bold small">MARKETING</span>
+                    <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Google Ads / Meta</span>
+                </div>
+                <h4 class="mb-3 fw-bold">Global SaaS Campaign</h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Executed a high-converting paid acquisition strategy for an enterprise SaaS platform. By utilizing AI-driven targeting and programmatic bidding, we lowered CPA by 65% across global markets.</p>
+                <a href="portfolio-details-2.html" class="clay-btn clay-btn-primary w-100 text-center">View Project Details</a>
             </div>
         </div>
     </div>
 
     <!-- Item 3 -->
     <div class="col-md-6 col-lg-4 portfolio-item" data-category="development">
-        <div class="clay-card p-2 h-100 d-flex flex-column">
-            <div class="overflow-hidden mb-3 position-relative" style="border-radius: calc(var(--clay-radius) - 10px);">
-                <img src="./assets/portfolio-3.jpg" alt="E-Commerce" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-overlay" style="transition: opacity 0.3s;">
-                    <a href="portfolio-details-3.html" class="clay-btn clay-btn-primary">View Project</a>
-                </div>
+        <div class="clay-card p-0 h-100 d-flex flex-column" style="overflow: hidden;">
+            <div class="position-relative" style="border-radius: var(--clay-radius-sm) var(--clay-radius-sm) 0 0;">
+                <img src="./assets/service_web_dev.jpg" alt="E-Commerce Platform" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
             </div>
-            <div class="p-2">
-                <span class="text-primary fw-semibold small">DEVELOPMENT</span>
-                <h4 class="mb-0 mt-1">B2B E-Commerce Platform</h4>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-primary fw-bold small">DEVELOPMENT</span>
+                    <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Next.js / Node</span>
+                </div>
+                <h4 class="mb-3 fw-bold">B2B E-Commerce Platform</h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Engineered a highly scalable, headless e-commerce architecture supporting over 10,000 concurrent transactions. Included custom API integrations for real-time inventory and global logistics routing.</p>
+                <a href="portfolio-details-3.html" class="clay-btn clay-btn-primary w-100 text-center">View Project Details</a>
             </div>
         </div>
     </div>
 
     <!-- Item 4 -->
     <div class="col-md-6 col-lg-4 portfolio-item" data-category="branding">
-        <div class="clay-card p-2 h-100 d-flex flex-column">
-            <div class="overflow-hidden mb-3 position-relative" style="border-radius: calc(var(--clay-radius) - 10px);">
-                <img src="./assets/portfolio-4.jpg" alt="Corporate Identity" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-overlay" style="transition: opacity 0.3s;">
-                    <a href="portfolio-details-4.html" class="clay-btn clay-btn-primary">View Project</a>
-                </div>
+        <div class="clay-card p-0 h-100 d-flex flex-column" style="overflow: hidden;">
+            <div class="position-relative" style="border-radius: var(--clay-radius-sm) var(--clay-radius-sm) 0 0;">
+                <img src="./assets/service_brand.jpg" alt="Corporate Identity" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
             </div>
-            <div class="p-2">
-                <span class="text-primary fw-semibold small">BRANDING</span>
-                <h4 class="mb-0 mt-1">Corporate Identity Refresh</h4>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-primary fw-bold small">BRANDING</span>
+                    <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Identity / Strategy</span>
+                </div>
+                <h4 class="mb-3 fw-bold">Corporate Identity Refresh</h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Modernized a 20-year-old corporate brand to appeal to a younger demographic. Delivered a comprehensive logo system, brand guidelines, typography overhaul, and strategic messaging framework.</p>
+                <a href="portfolio-details-4.html" class="clay-btn clay-btn-primary w-100 text-center">View Project Details</a>
             </div>
         </div>
     </div>
 
     <!-- Item 5 -->
     <div class="col-md-6 col-lg-4 portfolio-item" data-category="web-design">
-        <div class="clay-card p-2 h-100 d-flex flex-column">
-            <div class="overflow-hidden mb-3 position-relative" style="border-radius: calc(var(--clay-radius) - 10px);">
-                <img src="./assets/Modern Real Estate Portal.jpg" alt="Modern Real Estate Portal" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-overlay" style="transition: opacity 0.3s;">
-                    <a href="portfolio-details-5.html" class="clay-btn clay-btn-primary">View Project</a>
-                </div>
+        <div class="clay-card p-0 h-100 d-flex flex-column" style="overflow: hidden;">
+            <div class="position-relative" style="border-radius: var(--clay-radius-sm) var(--clay-radius-sm) 0 0;">
+                <img src="./assets/service_ux.jpg" alt="Real Estate Portal" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
             </div>
-            <div class="p-2">
-                <span class="text-primary fw-semibold small">WEB DESIGN</span>
-                <h4 class="mb-0 mt-1">Modern Real Estate Portal</h4>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-primary fw-bold small">UX RESEARCH & DESIGN</span>
+                    <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">User Journeys</span>
+                </div>
+                <h4 class="mb-3 fw-bold">Modern Real Estate Portal</h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Conducted deep UX research and persona mapping to redesign a property portal. Introduced intuitive map-based search filters and streamlined the lead-generation funnel to triple conversion rates.</p>
+                <a href="portfolio-details-5.html" class="clay-btn clay-btn-primary w-100 text-center">View Project Details</a>
             </div>
         </div>
     </div>
 
     <!-- Item 6 -->
     <div class="col-md-6 col-lg-4 portfolio-item" data-category="development marketing">
-        <div class="clay-card p-2 h-100 d-flex flex-column">
-            <div class="overflow-hidden mb-3 position-relative" style="border-radius: calc(var(--clay-radius) - 10px);">
-                <img src="./assets/portfolio-6.jpg" alt="Portfolio 6" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-overlay" style="transition: opacity 0.3s;">
-                    <a href="portfolio-details-6.html" class="clay-btn clay-btn-primary">View Project</a>
-                </div>
+        <div class="clay-card p-0 h-100 d-flex flex-column" style="overflow: hidden;">
+            <div class="position-relative" style="border-radius: var(--clay-radius-sm) var(--clay-radius-sm) 0 0;">
+                <img src="./assets/service_seo.jpg" alt="Analytics Dashboard" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
             </div>
-            <div class="p-2">
-                <span class="text-primary fw-semibold small">DEVELOPMENT</span>
-                <h4 class="mb-0 mt-1">Analytics Dashboard Platform</h4>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-primary fw-bold small">MARKETING & ANALYTICS</span>
+                    <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Data / SEO</span>
+                </div>
+                <h4 class="mb-3 fw-bold">Analytics Dashboard Platform</h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Designed and marketed a proprietary marketing analytics dashboard for enterprise clients. Combined technical SEO architecture with live data visualization components to track ROAS in real-time.</p>
+                <a href="portfolio-details-6.html" class="clay-btn clay-btn-primary w-100 text-center">View Project Details</a>
             </div>
         </div>
     </div>
 
-</div></section>
+</div>
+</section>
     </main>
 
     <footer class="clay-footer">

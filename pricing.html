@@ -28,8 +28,7 @@
                         <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
                             <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
                         </button>
-                        <a href="login.html" class="clay-btn d-none d-xl-inline-flex unauth-link px-4">Login</a>
-                        <a href="register.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex unauth-link px-4">Sign Up</a>
+                        <a href="contact.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex px-4">Start a Project</a>
                     </div>
                 <button class="navbar-toggler theme-toggle d-xl-none ms-1 order-xl-4 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                     <i class="bi bi-list fs-4"></i>
@@ -67,9 +66,8 @@
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="contact.html">Contact</a></li>
             </ul>
-            <div class="d-grid gap-3" id="mobileAuthContainer">
-                <a href="login.html" class="clay-btn w-100 unauth-link">Login</a>
-                <a href="register.html" class="clay-btn clay-btn-primary w-100 unauth-link">Sign Up</a>
+            <div class="d-grid gap-3">
+                <a href="contact.html" class="clay-btn clay-btn-primary w-100">Start a Project</a>
             </div>
         </div>
     </div>
@@ -95,60 +93,80 @@
             </div>
         </section>
 
-        <!-- Pricing Cards -->
+                <!-- Pricing Cards -->
         <section class="pt-2 pb-5">
             <div class="container">
                 <div class="row g-4 align-items-center justify-content-center">
-                    <!-- Starter -->
+                    
+                    <!-- Starter / Design -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up">
                         <div class="clay-card text-center p-5 h-100 d-flex flex-column">
+                            <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle mb-3 mx-auto">DESIGN & DEV</span>
                             <h4 class="fw-bold mb-2">STARTER</h4>
-                            <p class="text-muted-clay small mb-4">For small businesses</p>
-                            <h2 class="display-4 fw-bold mb-4">$<span class="price-val" data-monthly="999" data-yearly="799">999</span><span class="fs-6 text-muted-clay fw-normal">/mo</span></h2>
+                            <p class="text-muted-clay small mb-4">Perfect for small businesses needing a robust web presence.</p>
+                            <div class="mb-4">
+                                <h2 class="display-4 fw-bold mb-0 text-primary">$<span class="price-val" data-monthly="999" data-yearly="799">999</span><span class="fs-6 text-muted-clay fw-normal">/mo</span></h2>
+                                <p class="text-muted-clay small mt-1 mb-0 yearly-text-indicator">Billed Monthly (Save 20% on Yearly)</p>
+                            </div>
                             <ul class="list-unstyled d-flex flex-column gap-3 mb-4 text-start">
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Custom Web Design</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Basic SEO Setup</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> 5 Pages Included</li>
-                                <li class="text-muted-clay"><i class="bi bi-x-circle me-2"></i> Monthly Reporting</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Custom UI/UX Design</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Up to 10 Responsive Pages</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> CMS Integration (WordPress/Webflow)</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Basic Technical SEO Setup</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> 1 Month Post-Launch Support</li>
+                                <li class="text-muted-clay"><i class="bi bi-x-circle me-2"></i> Ongoing Marketing Campaigns</li>
                             </ul>
-                            <a href="contact.html" class="clay-btn w-100 mt-auto">Choose Plan</a>
+                            <a href="contact.html" class="clay-btn w-100 mt-auto">Choose Starter</a>
                         </div>
                     </div>
                     
-                    <!-- Growth -->
+                    <!-- Growth / Marketing -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="clay-card text-center p-5 position-relative h-100 d-flex flex-column" style="border: 2px solid var(--clr-primary); z-index: 10;">
                             <div class="position-absolute top-0 start-50 translate-middle">
                                 <span class="badge bg-primary px-3 py-2 rounded-pill">MOST POPULAR</span>
                             </div>
+                            <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle mb-3 mx-auto mt-2">SEO & MARKETING</span>
                             <h4 class="fw-bold mb-2">GROWTH</h4>
-                            <p class="text-muted-clay small mb-4">For scaling startups</p>
-                            <h2 class="display-4 fw-bold mb-4 text-primary">$<span class="price-val" data-monthly="1999" data-yearly="1599">1999</span><span class="fs-6 text-muted-clay fw-normal">/mo</span></h2>
+                            <p class="text-muted-clay small mb-4">For startups & businesses scaling their audience.</p>
+                            <div class="mb-4">
+                                <h2 class="display-4 fw-bold mb-0 text-primary">$<span class="price-val" data-monthly="1999" data-yearly="1599">1999</span><span class="fs-6 text-muted-clay fw-normal">/mo</span></h2>
+                                <p class="text-muted-clay small mt-1 mb-0 yearly-text-indicator">Billed Monthly (Save 20% on Yearly)</p>
+                            </div>
                             <ul class="list-unstyled d-flex flex-column gap-3 mb-4 text-start">
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Custom Web Design</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Advanced SEO</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Social Media Management</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Monthly Reporting</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Everything in Starter</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Advanced On-Page & Off-Page SEO</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Paid Ads Management (Google/Meta)</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Content & Social Media Strategy</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Monthly Performance Reports</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Dedicated Account Manager</li>
                             </ul>
-                            <a href="contact.html" class="clay-btn clay-btn-primary w-100 mt-auto">Choose Plan</a>
+                            <a href="contact.html" class="clay-btn clay-btn-primary w-100 mt-auto">Choose Growth</a>
                         </div>
                     </div>
                     
-                    <!-- Enterprise -->
+                    <!-- Pro / Full Service -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="clay-card text-center p-5 h-100 d-flex flex-column">
+                            <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle mb-3 mx-auto">FULL AGENCY</span>
                             <h4 class="fw-bold mb-2">ENTERPRISE</h4>
-                            <p class="text-muted-clay small mb-4">For large organizations</p>
-                            <h2 class="display-4 fw-bold mb-4">$<span class="price-val" data-monthly="3999" data-yearly="3199">3999</span><span class="fs-6 text-muted-clay fw-normal">/mo</span></h2>
+                            <p class="text-muted-clay small mb-4">Comprehensive end-to-end digital transformation.</p>
+                            <div class="mb-4">
+                                <h2 class="display-4 fw-bold mb-0 text-primary">$<span class="price-val" data-monthly="4999" data-yearly="3999">4999</span><span class="fs-6 text-muted-clay fw-normal">/mo</span></h2>
+                                <p class="text-muted-clay small mt-1 mb-0 yearly-text-indicator">Billed Monthly (Save 20% on Yearly)</p>
+                            </div>
                             <ul class="list-unstyled d-flex flex-column gap-3 mb-4 text-start">
                                 <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Everything in Growth</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Paid Advertising (PPC)</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Dedicated Account Manager</li>
-                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> 24/7 Premium Support</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Full Custom Web App Engineering</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Global Multi-Market SEO Campaigns</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Brand Identity & Positioning</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> 24/7 Priority SLA Support</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> On-Site Strategy Workshops</li>
                             </ul>
-                            <a href="contact.html" class="clay-btn w-100 mt-auto">Choose Plan</a>
+                            <a href="contact.html" class="clay-btn w-100 mt-auto">Contact Sales</a>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -230,14 +248,17 @@
                 toggle.addEventListener('change', (e) => {
                     const isYearly = e.target.checked;
                     
+                                        const textIndicators = document.querySelectorAll('.yearly-text-indicator');
                     if(isYearly) {
                         lblMonthly.classList.add('text-muted-clay');
                         lblYearly.classList.remove('text-muted-clay');
                         lblYearly.classList.add('text-primary');
+                        textIndicators.forEach(el => el.innerText = 'Billed Annually');
                     } else {
                         lblMonthly.classList.remove('text-muted-clay');
                         lblYearly.classList.add('text-muted-clay');
                         lblYearly.classList.remove('text-primary');
+                        textIndicators.forEach(el => el.innerText = 'Billed Monthly (Save 20% on Yearly)');
                     }
 
                     prices.forEach(price => {

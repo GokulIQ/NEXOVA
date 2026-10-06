@@ -28,8 +28,7 @@
                         <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
                             <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
                         </button>
-                        <a href="login.html" class="clay-btn d-none d-xl-inline-flex unauth-link px-4">Login</a>
-                        <a href="register.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex unauth-link px-4">Sign Up</a>
+                        <a href="contact.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex px-4">Start a Project</a>
                     </div>
                 <button class="navbar-toggler theme-toggle d-xl-none ms-1 order-xl-4 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                     <i class="bi bi-list fs-4"></i>
@@ -67,9 +66,8 @@
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="contact.html">Contact</a></li>
             </ul>
-            <div class="d-grid gap-3" id="mobileAuthContainer">
-                <a href="login.html" class="clay-btn w-100 unauth-link">Login</a>
-                <a href="register.html" class="clay-btn clay-btn-primary w-100 unauth-link">Sign Up</a>
+            <div class="d-grid gap-3">
+                <a href="contact.html" class="clay-btn clay-btn-primary w-100">Start a Project</a>
             </div>
         </div>
     </div>
@@ -97,95 +95,177 @@
 
         <section class="pt-0 pb-5">
             <div class="container">
+                                                <!-- Featured Post -->
+                <div class="row mb-5 pb-4 border-bottom border-secondary-subtle" id="featuredPost" data-title="The Future of UI Design in 2026">
+                    <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="overflow-hidden" style="border-radius: var(--clay-radius-lg);">
+                            <img src="./assets/service_ui_ux.jpg" alt="UI Design 2026" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-lg-5 d-flex flex-column justify-content-center" data-aos="fade-left">
+                        <div class="d-flex gap-3 mb-3">
+                            <span class="badge bg-primary text-white px-3 py-2 rounded-pill">FEATURED</span>
+                            <span class="text-primary fw-semibold small d-flex align-items-center"><i class="bi bi-clock me-1"></i> 8 Min Read</span>
+                        </div>
+                        <h2 class="fw-bold mb-4"><a href="blog-details.html" class="text-decoration-none text-reset">The Future of UI Design in 2026: Trends & Innovations</a></h2>
+                        <p class="text-muted-clay fs-5 mb-4">Explore the absolute latest trends shaping digital interfaces over the next three years. We dive deep into Claymorphism, AI-driven adaptive layouts, glassmorphism iterations, and accessibility-first responsive frameworks that are redefining how users interact with the web.</p>
+                        <div class="d-flex align-items-center justify-content-between mt-auto pt-3">
+                            <div class="d-flex align-items-center">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Elena K." class="rounded-circle me-3 border border-secondary-subtle" style="width: 45px; height: 45px; object-fit: cover;">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Elena K.</h6>
+                                    <small class="text-muted-clay">Lead UX/UI Designer &bull; Oct 6, 2026</small>
+                                </div>
+                            </div>
+                            <a href="blog-details.html" class="clay-btn clay-btn-primary px-4 py-2 small">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Blog Grid -->
-                <div class="row g-4" id="blogGrid">
+                <div class="row g-5" id="blogGrid">
     
     <!-- Article 1 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="The Future of UI Design in 2026">
-        <div class="clay-card h-100 p-3">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog 1" class="img-fluid mb-3 w-100" style="border-radius: calc(var(--clay-radius) - 10px); height: 200px; object-fit: cover;">
-            <span class="text-primary fw-semibold small">WEB DESIGN</span>
-            <h5 class="mt-2 mb-3 fw-bold"><a href="blog-details.html" class="text-decoration-none text-reset">The Future of UI Design in 2026</a></h5>
-            <p class="text-muted-clay small mb-3">Explore the latest trends shaping digital interfaces, from Claymorphism to AI-driven layouts.</p>
-            <a href="blog-details.html" class="fw-bold d-inline-flex align-items-center gap-2 small">Read Article <i class="bi bi-arrow-right"></i></a>
+    <div class="col-md-6 col-lg-4 blog-post" data-title="Maximizing ROI with Social Media">
+        <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
+            <img src="./assets/service_ads.jpg" alt="Social Media ROI" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-primary fw-bold small">MARKETING</span>
+                    <span class="text-muted-clay small"><i class="bi bi-clock me-1"></i> 5 Min Read</span>
+                </div>
+                <h4 class="mb-3 fw-bold"><a href="blog-details-2.html" class="text-decoration-none text-reset">Maximizing ROI with Social Media</a></h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">A comprehensive guide to scaling your brand's presence across multiple social platforms efficiently. Learn how to leverage programmatic ad spend, A/B testing on Meta, and B2B lead generation on LinkedIn to drastically lower your CPA.</p>
+                
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary-subtle">
+                    <div class="d-flex align-items-center">
+                        <div class="author-avatar rounded-circle d-flex align-items-center justify-content-center fw-bold me-2" style="width: 35px; height: 35px;">MR</div>
+                        <small class="text-muted-clay fw-semibold">Marcus R.</small>
+                    </div>
+                    <a href="blog-details-2.html" class="fw-bold d-inline-flex align-items-center gap-1 small text-decoration-none text-primary">Read <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </div>
     
     <!-- Article 2 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="Maximizing ROI with Social Media">
-        <div class="clay-card h-100 p-3">
-            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog 2" class="img-fluid mb-3 w-100" style="border-radius: calc(var(--clay-radius) - 10px); height: 200px; object-fit: cover;">
-            <span class="text-primary fw-semibold small">MARKETING</span>
-            <h5 class="mt-2 mb-3 fw-bold"><a href="blog-details-2.html" class="text-decoration-none text-reset">Maximizing ROI with Social Media</a></h5>
-            <p class="text-muted-clay small mb-3">A comprehensive guide to scaling your brand's presence across multiple social platforms efficiently.</p>
-            <a href="blog-details-2.html" class="fw-bold d-inline-flex align-items-center gap-2 small">Read Article <i class="bi bi-arrow-right"></i></a>
+    <div class="col-md-6 col-lg-4 blog-post" data-title="Core Web Vitals and Search Rankings">
+        <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
+            <img src="./assets/service_seo.jpg" alt="Core Web Vitals SEO" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-primary fw-bold small">SEO & DATA</span>
+                    <span class="text-muted-clay small"><i class="bi bi-clock me-1"></i> 7 Min Read</span>
+                </div>
+                <h4 class="mb-3 fw-bold"><a href="blog-details-3.html" class="text-decoration-none text-reset">Core Web Vitals and Search Rankings</a></h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Why performance matters more than ever for your organic search engine visibility. We break down LCP, FID, and CLS metrics and provide actionable engineering tips to get perfect lighthouse scores.</p>
+                
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary-subtle">
+                    <div class="d-flex align-items-center">
+                        <div class="author-avatar rounded-circle d-flex align-items-center justify-content-center fw-bold me-2" style="width: 35px; height: 35px;">SJ</div>
+                        <small class="text-muted-clay fw-semibold">Sarah J.</small>
+                    </div>
+                    <a href="blog-details-3.html" class="fw-bold d-inline-flex align-items-center gap-1 small text-decoration-none text-primary">Read <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <!-- Article 3 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="Core Web Vitals and Search Rankings">
-        <div class="clay-card h-100 p-3">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog 3" class="img-fluid mb-3 w-100" style="border-radius: calc(var(--clay-radius) - 10px); height: 200px; object-fit: cover;">
-            <span class="text-primary fw-semibold small">SEO</span>
-            <h5 class="mt-2 mb-3 fw-bold"><a href="blog-details-3.html" class="text-decoration-none text-reset">Core Web Vitals and Search Rankings</a></h5>
-            <p class="text-muted-clay small mb-3">Why performance matters more than ever for your organic search engine visibility.</p>
-            <a href="blog-details-3.html" class="fw-bold d-inline-flex align-items-center gap-2 small">Read Article <i class="bi bi-arrow-right"></i></a>
+    <div class="col-md-6 col-lg-4 blog-post" data-title="Building Scalable Frontend Architectures">
+        <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
+            <img src="./assets/service_web_dev.jpg" alt="Frontend Architectures" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-primary fw-bold small">ENGINEERING</span>
+                    <span class="text-muted-clay small"><i class="bi bi-clock me-1"></i> 10 Min Read</span>
+                </div>
+                <h4 class="mb-3 fw-bold"><a href="blog-details-4.html" class="text-decoration-none text-reset">Building Scalable Frontend Architectures</a></h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">An inside look at how we structure React and Next.js applications for enterprise clients. From state management with Redux Toolkit to micro-frontend deployments and CI/CD pipelines.</p>
+                
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary-subtle">
+                    <div class="d-flex align-items-center">
+                        <div class="author-avatar rounded-circle d-flex align-items-center justify-content-center fw-bold me-2" style="width: 35px; height: 35px;">TD</div>
+                        <small class="text-muted-clay fw-semibold">Tom D.</small>
+                    </div>
+                    <a href="blog-details-4.html" class="fw-bold d-inline-flex align-items-center gap-1 small text-decoration-none text-primary">Read <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Article 4 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="Building Scalable Frontend Architectures">
-        <div class="clay-card h-100 p-3">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog 4" class="img-fluid mb-3 w-100" style="border-radius: calc(var(--clay-radius) - 10px); height: 200px; object-fit: cover;">
-            <span class="text-primary fw-semibold small">DEVELOPMENT</span>
-            <h5 class="mt-2 mb-3 fw-bold"><a href="blog-details-4.html" class="text-decoration-none text-reset">Building Scalable Frontend Architectures</a></h5>
-            <p class="text-muted-clay small mb-3">Learn how to architect large-scale applications using vanilla JS and modular CSS.</p>
-            <a href="blog-details-4.html" class="fw-bold d-inline-flex align-items-center gap-2 small">Read Article <i class="bi bi-arrow-right"></i></a>
-        </div>
-    </div>
-
-    <!-- Article 5 -->
     <div class="col-md-6 col-lg-4 blog-post" data-title="Mastering Typography in Web Design">
-        <div class="clay-card h-100 p-3">
-            <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog 5" class="img-fluid mb-3 w-100" style="border-radius: calc(var(--clay-radius) - 10px); height: 200px; object-fit: cover;">
-            <span class="text-primary fw-semibold small">WEB DESIGN</span>
-            <h5 class="mt-2 mb-3 fw-bold"><a href="blog-details-5.html" class="text-decoration-none text-reset">Mastering Typography in Web Design</a></h5>
-            <p class="text-muted-clay small mb-3">How font choices impact user psychology, readability, and overall brand perception.</p>
-            <a href="blog-details-5.html" class="fw-bold d-inline-flex align-items-center gap-2 small">Read Article <i class="bi bi-arrow-right"></i></a>
-        </div>
-    </div>
-
-    <!-- Article 6 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="The Power of Local SEO">
-        <div class="clay-card h-100 p-3">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog 6" class="img-fluid mb-3 w-100" style="border-radius: calc(var(--clay-radius) - 10px); height: 200px; object-fit: cover;">
-            <span class="text-primary fw-semibold small">SEO</span>
-            <h5 class="mt-2 mb-3 fw-bold"><a href="blog-details-6.html" class="text-decoration-none text-reset">The Power of Local SEO</a></h5>
-            <p class="text-muted-clay small mb-3">Dominate your local market by optimizing your Google Business Profile and local citations.</p>
-            <a href="blog-details-6.html" class="fw-bold d-inline-flex align-items-center gap-2 small">Read Article <i class="bi bi-arrow-right"></i></a>
-        </div>
-    </div>
-
-</div>
-                
-                <!-- Pagination -->
-                <!-- <div class="d-flex justify-content-center mt-5" id="blogPagination">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination gap-2 mb-0">
-                            <li class="page-item disabled"><a class="clay-btn p-2 px-3" href="#">Previous</a></li>
-                            <li class="page-item"><a class="clay-btn p-2 px-3 clay-btn-primary" href="#">1</a></li>
-                            <li class="page-item"><a class="clay-btn p-2 px-3" href="#">2</a></li>
-                            <li class="page-item"><a class="clay-btn p-2 px-3" href="#">Next</a></li>
-                        </ul>
-                    </nav>
-                </div> -->
-
-                <!-- No Results Message -->
-                <div id="noResults" class="text-center py-5 d-none">
-                    <i class="bi bi-search fs-1 text-muted-clay mb-3"></i>
-                    <h4>No articles found</h4>
-                    <p class="text-muted-clay">Try adjusting your search criteria.</p>
+        <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
+            <img src="./assets/service_ui_ux.jpg" alt="Typography and web design" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-primary fw-bold small">WEB DESIGN</span>
+                    <span class="text-muted-clay small"><i class="bi bi-clock me-1"></i> 6 Min Read</span>
                 </div>
+                <h4 class="mb-3 fw-bold"><a href="blog-details-5.html" class="text-decoration-none text-reset">Mastering Typography in Web Design</a></h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Learn how type choices, readable scales, and clear visual hierarchy make websites easier to use and help every brand communicate with confidence.</p>
+                
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary-subtle">
+                    <div class="d-flex align-items-center">
+                        <div class="author-avatar rounded-circle d-flex align-items-center justify-content-center fw-bold me-2" style="width: 35px; height: 35px;">EK</div>
+                        <small class="text-muted-clay fw-semibold">Elena K.</small>
+                    </div>
+                    <a href="blog-details-5.html" class="fw-bold d-inline-flex align-items-center gap-1 small text-decoration-none text-primary">Read <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Article 5 -->
+    <div class="col-md-6 col-lg-4 blog-post" data-title="The Power of Local SEO">
+        <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
+            <img src="./assets/service_seo.jpg" alt="Local search results" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-primary fw-bold small">SEO</span>
+                    <span class="text-muted-clay small"><i class="bi bi-clock me-1"></i> 9 Min Read</span>
+                </div>
+                <h4 class="mb-3 fw-bold"><a href="blog-details-6.html" class="text-decoration-none text-reset">The Power of Local SEO</a></h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">Help nearby customers find your business with a complete local search strategy, an accurate business profile, and consistent information across directories.</p>
+                
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary-subtle">
+                    <div class="d-flex align-items-center">
+                        <div class="author-avatar rounded-circle d-flex align-items-center justify-content-center fw-bold me-2" style="width: 35px; height: 35px;">AL</div>
+                        <small class="text-muted-clay fw-semibold">Anna L.</small>
+                    </div>
+                    <a href="blog-details-6.html" class="fw-bold d-inline-flex align-items-center gap-1 small text-decoration-none text-primary">Read <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Article 6 -->
+    <div class="col-md-6 col-lg-4 blog-post" data-title="The Role of Generative AI in Creative Agencies">
+        <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Generative AI" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-primary fw-bold small">INNOVATION</span>
+                    <span class="text-muted-clay small"><i class="bi bi-clock me-1"></i> 4 Min Read</span>
+                </div>
+                <h4 class="mb-3 fw-bold"><a href="blog-details-7.html" class="text-decoration-none text-reset">The Role of Generative AI in Agencies</a></h4>
+                <p class="text-muted-clay small mb-4 flex-grow-1">How AI tools like Midjourney and ChatGPT are augmenting creative workflows, speeding up ideation phases, and allowing agencies to deliver higher quality assets faster than ever before.</p>
+                
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary-subtle">
+                    <div class="d-flex align-items-center">
+                        <div class="author-avatar rounded-circle d-flex align-items-center justify-content-center fw-bold me-2" style="width: 35px; height: 35px;">MR</div>
+                        <small class="text-muted-clay fw-semibold">Marcus R.</small>
+                    </div>
+                    <a href="blog-details-7.html" class="fw-bold d-inline-flex align-items-center gap-1 small text-decoration-none text-primary">Read <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <p id="noResults" class="clay-card text-center text-muted-clay d-none" role="status">No articles match your search. Try another keyword.</p>
+
             </div>
         </section>
 
@@ -250,37 +330,27 @@
     <script>
         AOS.init({ duration: 800, once: true });
 
-        // Simple Search Logic
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.getElementById('blogSearch');
-            const posts = document.querySelectorAll('.blog-post');
+            const featuredPost = document.getElementById('featuredPost');
+            const posts = document.querySelectorAll('#blogGrid .blog-post');
             const noResults = document.getElementById('noResults');
-            const pagination = document.getElementById('blogPagination');
 
-            if(searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    const term = e.target.value.toLowerCase();
-                    let count = 0;
-                    
-                    posts.forEach(post => {
-                        const contentText = post.textContent.toLowerCase();
-                        if(contentText.includes(term)) {
-                            post.style.display = 'block';
-                            count++;
-                        } else {
-                            post.style.display = 'none';
-                        }
-                    });
+            if (!searchInput || !noResults) return;
 
-                    if(count === 0) {
-                        noResults.classList.remove('d-none');
-                        pagination.classList.add('d-none');
-                    } else {
-                        noResults.classList.add('d-none');
-                        pagination.classList.remove('d-none');
-                    }
+            searchInput.addEventListener('input', () => {
+                const term = searchInput.value.trim().toLocaleLowerCase();
+                let visibleCount = 0;
+
+                [featuredPost, ...posts].forEach(post => {
+                    if (!post) return;
+                    const matches = `${post.dataset.title || ''} ${post.textContent}`.toLocaleLowerCase().includes(term);
+                    post.hidden = !matches;
+                    if (matches) visibleCount++;
                 });
-            }
+
+                noResults.classList.toggle('d-none', visibleCount > 0);
+            });
         });
     </script>
 </body>

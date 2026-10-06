@@ -3,16 +3,18 @@
  * Design System: Claymorphism
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     /* Colors */
     --clr-bg: #e0e5ec;
     --clr-surface: #e0e5ec;
     --clr-primary: #4e65ff;
-    --clr-secondary: #92effd;
-    --clr-text: #2d3436;
-    --clr-text-muted: #636e72;
+    --clr-primary-rgb: 78, 101, 255;
+    --clr-primary-hover: #3247d5;
+    --clr-secondary: #3247d5;
+    --clr-text: #1a202c;
+    --clr-text-muted: #4a5568;
     --clr-border: rgba(255, 255, 255, 0.4);
     
     /* Claymorphism Variables */
@@ -42,14 +44,16 @@
         inset -4px -4px 8px rgba(255, 255, 255, 0.2);
 
     /* Typography */
-    --font-primary: 'Outfit', sans-serif;
-    --font-heading: 'Syne', sans-serif;
+    --font-primary: 'Rubik', sans-serif;
+    --font-heading: 'Rubik', sans-serif;
 }
 
 [data-theme="dark"] {
     --clr-bg: #2d3238;
     --clr-surface: #2d3238;
     --clr-primary: #6c5ce7;
+    --clr-primary-rgb: 108, 92, 231;
+    --clr-primary-hover: #5448b8;
     --clr-secondary: #a29bfe;
     --clr-text: #f5f6fa;
     --clr-text-muted: #b2bec3;
@@ -154,9 +158,9 @@ a:hover {
 }
 .clay-btn-primary:hover {
     color: #fff;
-    background: var(--clr-secondary);
+    background: var(--clr-primary-hover, #3247d5);
     box-shadow: 
-        4px 4px 8px rgba(146, 239, 253, 0.4), 
+        4px 4px 8px rgba(78, 101, 255, 0.5), 
         -4px -4px 8px rgba(255, 255, 255, 0.2), 
         inset 2px 2px 4px rgba(255,255,255,0.3);
 }
@@ -193,6 +197,32 @@ a:hover {
     font-size: clamp(2.5rem, 5vw, 5rem);
     line-height: 1.3;
     letter-spacing: -0.02em;
+}
+
+.hero-eyebrow {
+    background-color: var(--clr-primary);
+    color: #fff;
+    border: 1px solid var(--clr-primary);
+    box-shadow: 0 6px 16px rgba(78, 101, 255, 0.28);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* Keep page headings readable and the fixed-header offset consistent. */
+main {
+    padding-top: 100px;
+}
+main h1.heading-xl,
+main h1.oversized-heading {
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.3;
+}
+
+.cta-section {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Globals */
@@ -333,8 +363,14 @@ body {
 
 
 /* Bootstrap Utility Overrides for Theme Consistency */
-.text-primary { color: var(--clr-primary) !important; }
-.bg-primary { background-color: var(--clr-primary) !important; }
+.text-primary { color: rgba(var(--clr-primary-rgb), var(--bs-text-opacity, 1)) !important; }
+.bg-primary { background-color: rgba(var(--clr-primary-rgb), var(--bs-bg-opacity, 1)) !important; }
+.blog-details-cta { background-color: var(--clr-primary-hover) !important; }
+.blog-details-cta .blog-details-contact { color: var(--clr-primary-hover) !important; }
+.blog-post .author-avatar {
+    background-color: var(--clr-primary) !important;
+    color: #fff !important;
+}
 .bg-surface { background-color: var(--clr-surface) !important; }
 .text-body, .text-dark { color: var(--clr-text) !important; }
 .bg-light { background-color: var(--clr-bg) !important; }

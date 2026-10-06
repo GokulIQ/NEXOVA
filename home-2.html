@@ -29,7 +29,7 @@
             background: radial-gradient(circle at top left, rgba(108, 92, 231, 0.25), transparent 60%), radial-gradient(circle at bottom right, rgba(146, 239, 253, 0.15), transparent 50%);
             position: relative;
             overflow: hidden;
-            padding-top: 120px;
+            padding-top: 100px;
             padding-bottom: 60px;
         }
         
@@ -124,8 +124,7 @@
                         <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
                             <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
                         </button>
-                        <a href="login.html" class="clay-btn d-none d-xl-inline-flex unauth-link px-4">Login</a>
-                        <a href="register.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex unauth-link px-4">Sign Up</a>
+                        <a href="contact.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex px-4">Start a Project</a>
                     </div>
                 <button class="navbar-toggler theme-toggle d-xl-none ms-1 order-xl-4 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
                     <i class="bi bi-list fs-4"></i>
@@ -137,6 +136,8 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -162,9 +163,8 @@
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="contact.html">Contact</a></li>
             </ul>
-            <div class="d-grid gap-3" id="mobileAuthContainer">
-                <a href="login.html" class="clay-btn w-100 unauth-link">Login</a>
-                <a href="register.html" class="clay-btn clay-btn-primary w-100 unauth-link">Sign Up</a>
+            <div class="d-grid gap-3">
+                <a href="contact.html" class="clay-btn clay-btn-primary w-100">Start a Project</a>
             </div>
         </div>
     </div>
@@ -174,7 +174,7 @@
         
         <!-- Hero Section -->
         <section class="home-2-hero">
-            <div class="container-fluid px-4 px-lg-5 hero-content my-auto">
+            <div class="container-fluid px-4 px-lg-5 hero-content">
                 <div class="row align-items-center">
                     <div class="col-lg-7" data-aos="fade-up">
                         <h1 class="oversized-heading fw-bold mb-4">
@@ -211,108 +211,297 @@
             <div class="container-fluid px-4 px-lg-5">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="heading-xl mb-3">WHAT WE DO.</h2>
-                    <p class="text-muted-clay fs-5 mb-0">Specialized services for modern brands.</p>
+                    <p class="text-muted-clay fs-5 mb-0">Specialized digital solutions powered by modern tools, AI, and Web3 technologies.</p>
                 </div>
                 
                 <div class="row g-4">
-                    <!-- Service 1 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
-                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
-                                <img src="./assets/UI_UX & Web Design.jpg" alt="UI/UX Design" class="service-img">
+                    <!-- Web Designing -->
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="clay-card h-100 p-4 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-4" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/service_ui_ux.jpg" alt="Web Designing" class="service-img" style="height: 250px;">
                             </div>
                             <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="text-primary fw-semibold small">UI/UX DESIGN</span>
-                                <span class="service-number">01</span>
+                                <span class="text-primary fw-bold">DESIGN</span>
+                                <span class="service-number" style="font-size: 2rem;">01</span>
                             </div>
-                            <h5 class="fw-bold mb-2">Interface Design</h5>
-                            <p class="text-muted-clay small mb-3 flex-grow-1">Creating intuitive, user-centric interfaces that look beautiful and function flawlessly across all devices.</p>
-                            <a href="service-details.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                            <h3 class="fw-bold mb-3">Web Designing</h3>
+                            <p class="text-muted-clay mb-4">We craft stunning, highly interactive, and user-centric interfaces. By focusing on deep UX research and utilizing AI-driven design tools, we ensure every digital touchpoint is optimized for user retention, accessibility, and exceptional visual appeal.</p>
+                            
+                            <div class="row mb-4 flex-grow-1">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <h6 class="fw-bold">Offerings & Areas</h6>
+                                    <ul class="list-unstyled text-muted-clay small mb-0 d-flex flex-column gap-1">
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> UI/UX Design & Wireframing</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Interactive Prototyping</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Mobile & Web App Interfaces</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Design Systems</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h6 class="fw-bold">Tools & Tech</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Figma</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Framer</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Midjourney (AI)</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Sketch</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="service-details.html" class="fw-bold d-inline-flex align-items-center gap-2 mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Service 2 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
-                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
-                                <img src="./assets/Web Development.jpg" alt="Web Development" class="service-img">
+
+                    <!-- Web Development -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="clay-card h-100 p-4 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-4" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/service_web_dev.jpg" alt="Web Development" class="service-img" style="height: 250px;">
                             </div>
                             <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="text-primary fw-semibold small">DEVELOPMENT</span>
-                                <span class="service-number">02</span>
+                                <span class="text-primary fw-bold">ENGINEERING</span>
+                                <span class="service-number" style="font-size: 2rem;">02</span>
                             </div>
-                            <h5 class="fw-bold mb-2">Web Development</h5>
-                            <p class="text-muted-clay small mb-3 flex-grow-1">Building robust, scalable web applications using modern JavaScript frameworks like React, Next.js, and Node.</p>
-                            <a href="service-details-2.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                            <h3 class="fw-bold mb-3">Web Development</h3>
+                            <p class="text-muted-clay mb-4">We engineer robust, secure, and infinitely scalable architectures. Embracing the future with AI integrations and decentralized Web3 frameworks, our technical solutions are built for speed, advanced functionality, and seamless integrations.</p>
+                            
+                            <div class="row mb-4 flex-grow-1">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <h6 class="fw-bold">Offerings & Areas</h6>
+                                    <ul class="list-unstyled text-muted-clay small mb-0 d-flex flex-column gap-1">
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Full-Stack Web Apps</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Web3 & Smart Contracts</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Custom API Development</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> E-Commerce Architecture</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h6 class="fw-bold">Tools & Tech</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">React & Next.js</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Node.js</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Solidity (Web3)</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">OpenAI APIs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="service-details-2.html" class="fw-bold d-inline-flex align-items-center gap-2 mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Service 3 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
-                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
-                                <img src="./assets/SEO & Digital Marketing.jpg" alt="SEO" class="service-img">
+
+                    <!-- Brand Designing -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="clay-card h-100 p-4 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-4" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/service_brand.jpg" alt="Brand Designing" class="service-img" style="height: 250px;">
                             </div>
                             <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="text-primary fw-semibold small">SEO</span>
-                                <span class="service-number">03</span>
+                                <span class="text-primary fw-bold">IDENTITY</span>
+                                <span class="service-number" style="font-size: 2rem;">03</span>
                             </div>
-                            <h5 class="fw-bold mb-2">SEO Optimization</h5>
-                            <p class="text-muted-clay small mb-3 flex-grow-1">Data-driven search engine optimization strategies to rank higher and drive consistent organic traffic growth.</p>
-                            <a href="service-details-3.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                            <h3 class="fw-bold mb-3">Brand Designing</h3>
+                            <p class="text-muted-clay mb-4">We build iconic, recognizable brands that resonate with modern audiences. From establishing core messaging to developing comprehensive visual identities, we ensure your brand cuts through the noise and connects on a meaningful level.</p>
+                            
+                            <div class="row mb-4 flex-grow-1">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <h6 class="fw-bold">Offerings & Areas</h6>
+                                    <ul class="list-unstyled text-muted-clay small mb-0 d-flex flex-column gap-1">
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Brand Strategy & Positioning</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Logo Design Systems</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Brand Guidelines</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Visual Storytelling</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h6 class="fw-bold">Tools & Tech</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Adobe Illustrator</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">CorelDRAW</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Cinema 4D</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Generative AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="service-details-6.html" class="fw-bold d-inline-flex align-items-center gap-2 mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Service 4 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
-                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
-                                <img src="./assets/Ads.jpg" alt="Paid Advertising" class="service-img">
+
+                    <!-- Digital Marketing -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="clay-card h-100 p-4 d-flex flex-column home2-service-card">
+                            <div class="overflow-hidden mb-4" style="border-radius: calc(var(--clay-radius) - 10px);">
+                                <img src="./assets/service_seo.jpg" alt="Digital Marketing" class="service-img" style="height: 250px;">
                             </div>
                             <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="text-primary fw-semibold small">ADVERTISING</span>
-                                <span class="service-number">04</span>
+                                <span class="text-primary fw-bold">GROWTH</span>
+                                <span class="service-number" style="font-size: 2rem;">04</span>
                             </div>
-                            <h5 class="fw-bold mb-2">Paid Advertising</h5>
-                            <p class="text-muted-clay small mb-3 flex-grow-1">Targeted PPC campaigns on Google, Meta, and LinkedIn to maximize your ROI and reach the right audience.</p>
-                            <a href="service-details-4.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Service 5 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
-                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
-                                <img src="./assets/Marketing.jpg" alt="Social Media Marketing" class="service-img">
+                            <h3 class="fw-bold mb-3">Digital Marketing</h3>
+                            <p class="text-muted-clay mb-4">We drive targeted, measurable growth using advanced analytics, programmatic advertising, and AI-driven campaign optimizations. Our holistic marketing approaches maximize your ROI by connecting you directly with high-intent audiences globally.</p>
+                            
+                            <div class="row mb-4 flex-grow-1">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <h6 class="fw-bold">Offerings & Areas</h6>
+                                    <ul class="list-unstyled text-muted-clay small mb-0 d-flex flex-column gap-1">
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Technical SEO & Auditing</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Paid PPC Campaigns</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> Social Media Management</li>
+                                        <li><i class="bi bi-check2 text-primary me-1"></i> AI Analytics & CRO</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h6 class="fw-bold">Tools & Tech</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Google Analytics 4</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">SEMrush / Ahrefs</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">Meta & Google Ads</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-primary border border-primary-subtle">HubSpot CRM</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="text-primary fw-semibold small">SOCIAL MEDIA</span>
-                                <span class="service-number">05</span>
-                            </div>
-                            <h5 class="fw-bold mb-2">Social Media Marketing</h5>
-                            <p class="text-muted-clay small mb-3 flex-grow-1">Strategic social media management and content creation to grow your brand presence and community engagement.</p>
-                            <a href="service-details-5.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Service 6 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="clay-card h-100 p-3 d-flex flex-column home2-service-card">
-                            <div class="overflow-hidden mb-3" style="border-radius: calc(var(--clay-radius) - 10px);">
-                                <img src="./assets/Global SaaS Campaign.jpg" alt="Brand Strategy" class="service-img">
-                            </div>
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <span class="text-primary fw-semibold small">BRANDING</span>
-                                <span class="service-number">06</span>
-                            </div>
-                            <h5 class="fw-bold mb-2">Brand Strategy</h5>
-                            <p class="text-muted-clay small mb-3 flex-grow-1">Comprehensive brand identity development including logo design, guidelines, messaging, and visual storytelling.</p>
-                            <a href="service-details-6.html" class="fw-bold d-inline-flex align-items-center gap-2 small mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
+                            <a href="service-details-3.html" class="fw-bold d-inline-flex align-items-center gap-2 mt-auto">Explore Service <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="text-center mt-5" data-aos="fade-up">
-                    <a href="services.html" class="clay-btn clay-btn-primary">View All Services</a>
+                    <a href="services.html" class="clay-btn clay-btn-primary px-5 py-3 fs-5">View All Services</a>
                 </div>
             </div>
         </section>
 
+            <!-- Metrics Section -->
+        <section class="py-5 bg-primary bg-opacity-10 mt-5">
+            <div class="container py-4">
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <h2 class="display-4 fw-bold text-primary mb-2">200+</h2>
+                        <p class="text-muted-clay fw-semibold mb-0">Projects Delivered</p>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="display-4 fw-bold text-primary mb-2">45+</h2>
+                        <p class="text-muted-clay fw-semibold mb-0">Team Experts</p>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="display-4 fw-bold text-primary mb-2">99%</h2>
+                        <p class="text-muted-clay fw-semibold mb-0">Client Retention</p>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <h2 class="display-4 fw-bold text-primary mb-2">10x</h2>
+                        <p class="text-muted-clay fw-semibold mb-0">Average ROI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process Section -->
+        <section class="py-5 my-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="text-primary fw-bold small tracking-widest text-uppercase">Workflow</span>
+                    <h2 class="heading-xl mt-2">HOW WE WORK.</h2>
+                    <p class="text-muted-clay fs-5 mx-auto" style="max-width: 600px;">A streamlined, transparent process designed to deliver exceptional results on time, every time.</p>
+                </div>
+                
+                <div class="row g-4 position-relative">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                        <div class="clay-card h-100 p-4 text-center position-relative z-1">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 fw-bold fs-4" style="width: 60px; height: 60px;">1</div>
+                            <h4 class="fw-bold mb-3">Discovery</h4>
+                            <p class="text-muted-clay small mb-0">We dive deep into your brand, audience, and goals to build a strategic foundation.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="clay-card h-100 p-4 text-center position-relative z-1">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 fw-bold fs-4" style="width: 60px; height: 60px;">2</div>
+                            <h4 class="fw-bold mb-3">Strategy</h4>
+                            <p class="text-muted-clay small mb-0">Our team maps out user journeys, architectures, and campaign plans for execution.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="clay-card h-100 p-4 text-center position-relative z-1">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 fw-bold fs-4" style="width: 60px; height: 60px;">3</div>
+                            <h4 class="fw-bold mb-3">Execution</h4>
+                            <p class="text-muted-clay small mb-0">We design, build, and deploy high-quality digital assets using cutting-edge tools.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="clay-card h-100 p-4 text-center position-relative z-1">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 fw-bold fs-4" style="width: 60px; height: 60px;">4</div>
+                            <h4 class="fw-bold mb-3">Growth</h4>
+                            <p class="text-muted-clay small mb-0">Post-launch, we optimize performance, scale marketing, and drive measurable ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-5 bg-surface border-top border-bottom" style="border-color: var(--clr-border) !important;">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+                        <h2 class="heading-xl mb-4">CLIENT SUCCESS STORIES.</h2>
+                        <p class="text-muted-clay fs-5 mb-4">Don't just take our word for it. Hear from the ambitious brands and startups that have partnered with us.</p>
+                        <a href="portfolio.html" class="clay-btn clay-btn-primary">View Case Studies</a>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-left">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="clay-card p-4 h-100 d-flex flex-column">
+                                    <div class="d-flex text-warning mb-3 fs-5">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="fst-italic mb-4 flex-grow-1">"NEXOVA completely transformed our digital presence. Their UI/UX team is world-class, and the new platform increased our conversions by over 150% in the first quarter alone."</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="James D." class="rounded-circle me-3 border border-secondary-subtle" style="width: 50px; height: 50px; object-fit: cover;">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">James D.</h6>
+                                            <small class="text-muted-clay">CEO, TechFlow SaaS</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="clay-card p-4 h-100 d-flex flex-column">
+                                    <div class="d-flex text-warning mb-3 fs-5">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="fst-italic mb-4 flex-grow-1">"The most professional agency we've ever worked with. Their SEO and marketing strategies helped us break into international markets efficiently and predictably."</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah W." class="rounded-circle me-3 border border-secondary-subtle" style="width: 50px; height: 50px; object-fit: cover;">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">Sarah W.</h6>
+                                            <small class="text-muted-clay">VP Marketing, GlobalTrade</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-5 my-5">
+            <div class="container" data-aos="zoom-in">
+                <div class="clay-card p-5 text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, var(--clr-surface) 0%, rgba(78, 101, 255, 0.1) 100%); border: 1px solid var(--clr-primary);">
+                    <!-- Decorative Elements -->
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-25" style="filter: blur(100px); border-radius: 50%; transform: translate(-50%, -50%); z-index: 0;"></div>
+                    <div class="position-absolute bottom-0 end-0 w-100 h-100 bg-secondary opacity-25" style="filter: blur(100px); border-radius: 50%; transform: translate(50%, 50%); z-index: 0;"></div>
+                    
+                    <div class="position-relative z-1 py-4">
+                        <h2 class="display-5 fw-bold mb-4">Ready to accelerate your growth?</h2>
+                        <p class="fs-5 text-muted-clay mx-auto mb-5" style="max-width: 650px;">Stop settling for average results. Partner with our team of experts to build a brand, website, and marketing strategy that dominates your industry.</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="contact.html" class="clay-btn clay-btn-primary px-5 py-3 fs-5">Start Your Project</a>
+                            <a href="pricing.html" class="clay-btn px-5 py-3 fs-5">View Pricing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
