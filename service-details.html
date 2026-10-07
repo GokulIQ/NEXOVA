@@ -13,6 +13,16 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
     <link href="assets/css/rtl.css" rel="stylesheet">
+    <style>
+        .service-feature-card { transition: transform .25s ease, box-shadow .25s ease; }
+        .service-feature-card:hover { transform: translateY(-4px); box-shadow: var(--clay-shadow-outer); }
+        .service-details-card { position: sticky; top: 120px; }
+        .service-faq .accordion-button { border-radius: var(--clay-radius-sm); }
+        .service-faq .accordion-button:not(.collapsed) { color: var(--clr-primary) !important; }
+        .service-final-cta { border: 1px solid rgba(var(--clr-primary-rgb), .2); background: rgba(var(--clr-primary-rgb), .045); }
+        @media (max-width: 991.98px) { .service-details-card { position: static; } }
+        @media (prefers-reduced-motion: reduce) { .service-feature-card { transition: none; } }
+    </style>
 </head>
 <body>
 
@@ -82,12 +92,12 @@
                 <nav aria-label="breadcrumb" class="mb-4 d-flex justify-content-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none text-muted-clay">Services</a></li>
-                        <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">Web Design</li>
+                        <li class="breadcrumb-item active text-primary fw-bold" id="service-breadcrumb" aria-current="page">Service</li>
                     </ol>
                 </nav>
-                <h1 class="heading-xl mb-4">UI/UX & WEB DESIGN</h1>
-                <p class="fs-5 text-muted-clay max-w-75 mx-auto mb-5">We craft stunning, user-centric interfaces that not only look beautiful but are built to convert.</p>
-                <img src="./assets/UI_UX & WEB DESIGN1.jpg" alt="Web Design Hero" class="img-fluid w-100" style="height: 500px; object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer);">
+                <h1 class="heading-xl mb-4" id="service-title">Service</h1>
+                <p class="fs-5 text-muted-clay max-w-75 mx-auto mb-5" id="service-description"></p>
+                <img id="service-image" alt="" class="img-fluid w-100" style="height: clamp(260px, 38vw, 500px); object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer);">
             </div>
         </section>
 
@@ -237,6 +247,8 @@
     <script src="assets/js/storage.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/services-data.js"></script>
+    <script src="assets/js/service-details.js"></script>
     <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>

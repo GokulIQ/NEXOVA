@@ -365,8 +365,16 @@ body {
 /* Bootstrap Utility Overrides for Theme Consistency */
 .text-primary { color: rgba(var(--clr-primary-rgb), var(--bs-text-opacity, 1)) !important; }
 .bg-primary { background-color: rgba(var(--clr-primary-rgb), var(--bs-bg-opacity, 1)) !important; }
-.blog-details-cta { background-color: var(--clr-primary-hover) !important; }
-.blog-details-cta .blog-details-contact { color: var(--clr-primary-hover) !important; }
+.blog-details-cta {
+    background-color: rgba(var(--clr-primary-rgb), 0.07) !important;
+    color: var(--clr-text);
+    border: 1px solid rgba(var(--clr-primary-rgb), 0.24);
+    box-shadow: var(--clay-card-shadow) !important;
+}
+.blog-details-cta .blog-details-contact {
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(var(--clr-primary-rgb), 0.2);
+}
 .blog-post .author-avatar {
     background-color: var(--clr-primary) !important;
     color: #fff !important;

@@ -13,6 +13,25 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
     <link href="assets/css/rtl.css" rel="stylesheet">
+    <style>
+        .services-list { background: var(--clr-bg); color: var(--clr-text); }
+        .services-list .service-row { padding: 3.5rem 0; border-bottom: 1px solid color-mix(in srgb, var(--clr-text) 12%, transparent); }
+        .services-list .service-row:last-child { border-bottom: 0; }
+        .services-list h2 { color: var(--clr-text); font-weight: 700; }
+        .services-list p { color: var(--clr-text-muted); }
+        .services-list .service-number { color: var(--clr-primary); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; }
+        .service-visual { border-radius: 18px; overflow: hidden; background: var(--clr-surface); box-shadow: var(--clay-card-shadow); }
+        .service-visual img { display: block; width: 100%; height: 340px; object-fit: cover; transition: transform .55s ease; }
+        .service-visual:hover img { transform: scale(1.04); }
+        .service-features { color: var(--clr-text); }
+        @media (max-width: 767.98px) {
+            .services-list .service-row { padding: 2.5rem 0; }
+            .service-visual img { height: 250px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .service-visual img { transition: none; }
+        }
+    </style>
 </head>
 <body>
 
@@ -75,7 +94,7 @@
     <!-- Main Content -->
     
 
-            <main style="padding-top: 100px;">
+            <main>
         <!-- Page Hero -->
         <section class="py-5 text-center">
             <div class="container" data-aos="fade-up">
@@ -84,94 +103,104 @@
             </div>
         </section>
 
-        <!-- Services Detailed List -->
-        <section class="py-5">
-            <div class="container">
-                
-                <!-- UI Design (Image Right) -->
-                <div class="row align-items-center mb-5 pb-5 border-bottom border-secondary-subtle">
-                    <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5" data-aos="fade-right">
-                        <span class="display-4 text-primary fw-bold opacity-25">01</span>
-                        <h2 class="mb-4">UI Design</h2>
-                        <p class="text-muted-clay fs-5 mb-4">We create stunning, pixel-perfect user interfaces that captivate your audience. Our UI design process focuses on visual hierarchy, typography, and cohesive design systems to ensure your brand looks premium across every digital touchpoint.</p>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> High-Fidelity Interface Design</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Design Systems & Component Libraries</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Typography & Color Strategy</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Micro-interactions & Animations</li>
+        <!-- Numbered Services -->
+        <section class="services-list py-3">
+            <div class="container" id="services-list">
+                <article class="row align-items-center g-4 service-row" id="ui-ux-design">
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                        <span class="service-number fw-bold d-block mb-2">01</span>
+                        <h2 class="mb-3">UI/UX &amp; Web Design</h2>
+                        <p class="fs-5 mb-4">We shape clear, engaging digital experiences around your customers and your brand. From first wireframe to polished interface, every decision makes your website easier to use and more memorable.</p>
+                        <ul class="service-features list-unstyled d-flex flex-column gap-2 mb-4">
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Website UI/UX design</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Responsive layouts for every screen</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Conversion-focused landing page design</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> User-focused interfaces and prototypes</li>
                         </ul>
                         <a href="service-details.html" class="clay-btn">View Service <i class="bi bi-arrow-right"></i></a>
                     </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <div class="clay-card p-0 overflow-hidden" style="border-radius: var(--clay-radius-lg);">
-                            <img src="./assets/service_ui_ux.jpg" alt="UI Design Interface" class="img-fluid w-100" style="transition: transform 0.5s; height: 400px; object-fit: cover;">
-                        </div>
-                    </div>
-                </div>
+                    <div class="col-lg-6" data-aos="fade-left"><div class="service-visual"><img src="assets/UI_UX & Web Design.jpg" alt="A responsive website interface design displayed across devices" loading="lazy"></div></div>
+                </article>
 
-                <!-- UX Design (Image Left) -->
-                <div class="row align-items-center mb-5 pb-5 border-bottom border-secondary-subtle flex-column-reverse flex-lg-row">
-                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-right">
-                        <div class="clay-card p-0 overflow-hidden" style="border-radius: var(--clay-radius-lg);">
-                            <img src="./assets/service_ux.jpg" alt="UX Design Process and Journey Mapping" class="img-fluid w-100" style="transition: transform 0.5s; height: 400px; object-fit: cover;">
-                        </div>
-                    </div>
+                <article class="row align-items-center g-4 service-row flex-lg-row-reverse" id="web-development">
                     <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
-                        <span class="display-4 text-primary fw-bold opacity-25">02</span>
-                        <h2 class="mb-4">UX Design</h2>
-                        <p class="text-muted-clay fs-5 mb-4">Great products start with deep user empathy. We conduct extensive research and map out strategic user journeys to ensure your digital platform is intuitive, accessible, and solves real user problems effectively.</p>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> User Research & Personas</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> User Journey Mapping</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Wireframing & Prototyping</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Usability Testing & Analytics</li>
-                        </ul>
-                        <a href="service-details.html" class="clay-btn">View Service <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Web Designing (Image Right) -->
-                <div class="row align-items-center mb-5 pb-5 border-bottom border-secondary-subtle">
-                    <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5" data-aos="fade-right">
-                        <span class="display-4 text-primary fw-bold opacity-25">03</span>
-                        <h2 class="mb-4">Web Designing</h2>
-                        <p class="text-muted-clay fs-5 mb-4">We bring designs to life through robust frontend and backend engineering. Our team builds responsive, lightning-fast, and secure web experiences tailored for modern browsers and mobile devices.</p>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Responsive Web Layouts</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Frontend Architecture (React/Vue)</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Custom CMS Integrations</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Web Performance Optimization</li>
+                        <span class="service-number fw-bold d-block mb-2">02</span>
+                        <h2 class="mb-3">Web Development</h2>
+                        <p class="fs-5 mb-4">We engineer dependable web experiences that feel fast, work smoothly, and support your next stage of growth. From focused frontends to connected full-stack products, we build for real-world use.</p>
+                        <ul class="service-features list-unstyled d-flex flex-column gap-2 mb-4">
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Frontend development</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Backend development and integrations</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Full-stack web applications</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Responsive, scalable websites</li>
                         </ul>
                         <a href="service-details-2.html" class="clay-btn">View Service <i class="bi bi-arrow-right"></i></a>
                     </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <div class="clay-card p-0 overflow-hidden" style="border-radius: var(--clay-radius-lg);">
-                            <img src="./assets/service_web_dev.jpg" alt="Web Designing and Code" class="img-fluid w-100" style="transition: transform 0.5s; height: 400px; object-fit: cover;">
-                        </div>
-                    </div>
-                </div>
+                    <div class="col-lg-6" data-aos="fade-right"><div class="service-visual"><img src="assets/Web Development.jpg" alt="Web application development workspace and code" loading="lazy"></div></div>
+                </article>
 
-                <!-- Digital Marketing (Image Left) -->
-                <div class="row align-items-center mb-5 pb-5 flex-column-reverse flex-lg-row">
-                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-right">
-                        <div class="clay-card p-0 overflow-hidden" style="border-radius: var(--clay-radius-lg);">
-                            <img src="./assets/service_seo.jpg" alt="Digital Marketing and SEO Dashboards" class="img-fluid w-100" style="transition: transform 0.5s; height: 400px; object-fit: cover;">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
-                        <span class="display-4 text-primary fw-bold opacity-25">04</span>
-                        <h2 class="mb-4">Digital Marketing</h2>
-                        <p class="text-muted-clay fs-5 mb-4">We drive targeted growth through data-backed marketing strategies. From increasing organic search visibility to executing high-converting paid campaigns, we maximize your digital ROI.</p>
-                        <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Search Engine Optimization (SEO)</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Paid Advertising (Google & Meta)</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Content & Social Media Strategy</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Marketing Analytics & Reporting</li>
+                <article class="row align-items-center g-4 service-row" id="seo-digital-marketing">
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                        <span class="service-number fw-bold d-block mb-2">03</span>
+                        <h2 class="mb-3">SEO &amp; Digital Marketing</h2>
+                        <p class="fs-5 mb-4">We bring the right people to your business with joined-up search and content programs. Practical optimization and consistent measurement help turn organic visibility into lasting growth.</p>
+                        <ul class="service-features list-unstyled d-flex flex-column gap-2 mb-4">
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Technical and on-page SEO optimization</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Search engine marketing strategy</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Content marketing and editorial planning</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Organic traffic growth and reporting</li>
                         </ul>
                         <a href="service-details-3.html" class="clay-btn">View Service <i class="bi bi-arrow-right"></i></a>
                     </div>
-                </div>
+                    <div class="col-lg-6" data-aos="fade-left"><div class="service-visual"><img src="assets/SEO & Digital Marketing.jpg" alt="Digital marketing analytics and organic search performance" loading="lazy"></div></div>
+                </article>
 
+                <article class="row align-items-center g-4 service-row flex-lg-row-reverse" id="paid-advertising">
+                    <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                        <span class="service-number fw-bold d-block mb-2">04</span>
+                        <h2 class="mb-3">Paid Advertising</h2>
+                        <p class="fs-5 mb-4">We plan and manage paid campaigns that reach high-intent audiences and make every step measurable. Ongoing testing helps improve efficiency and turn more clicks into customers.</p>
+                        <ul class="service-features list-unstyled d-flex flex-column gap-2 mb-4">
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Google Ads campaign setup and management</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Meta Ads across Facebook and Instagram</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> LinkedIn Ads for professional audiences</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Campaign management and conversion optimization</li>
+                        </ul>
+                        <a href="service-details-4.html" class="clay-btn">View Service <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-right"><div class="service-visual"><img src="assets/Ads.jpg" alt="Paid advertising campaign dashboard on a laptop" loading="lazy"></div></div>
+                </article>
+
+                <article class="row align-items-center g-4 service-row" id="social-media-marketing">
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                        <span class="service-number fw-bold d-block mb-2">05</span>
+                        <h2 class="mb-3">Social Media Marketing</h2>
+                        <p class="fs-5 mb-4">We help your brand show up consistently with purposeful social content and thoughtful community management. Build stronger relationships, grow your audience, and keep your brand part of the conversation.</p>
+                        <ul class="service-features list-unstyled d-flex flex-column gap-2 mb-4">
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Social media strategy and channel planning</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Content creation and publishing</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Social media management and audience engagement</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Brand growth and performance insights</li>
+                        </ul>
+                        <a href="service-details-5.html" class="clay-btn">View Service <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left"><div class="service-visual"><img src="assets/Marketing.jpg" alt="Social media marketing creative and channel strategy" loading="lazy"></div></div>
+                </article>
+
+                <article class="row align-items-center g-4 service-row flex-lg-row-reverse" id="brand-strategy">
+                    <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                        <span class="service-number fw-bold d-block mb-2">06</span>
+                        <h2 class="mb-3">Brand Strategy</h2>
+                        <p class="fs-5 mb-4">We give ambitious businesses a distinctive point of view and a coherent identity. Clear positioning and practical guidelines help every experience feel recognizably yours.</p>
+                        <ul class="service-features list-unstyled d-flex flex-column gap-2 mb-4">
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Brand identity and positioning</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Logo and visual identity systems</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Brand guidelines and messaging</li>
+                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Marketing strategy aligned to your goals</li>
+                        </ul>
+                        <a href="service-details-6.html" class="clay-btn">View Service <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-right"><div class="service-visual"><img src="assets/service_brand.jpg" alt="Brand identity strategy and visual system" loading="lazy"></div></div>
+                </article>
             </div>
         </section>
 
@@ -244,6 +273,8 @@
     <script src="assets/js/storage.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/services-data.js"></script>
+    <script src="assets/js/services-page.js"></script>
     <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>

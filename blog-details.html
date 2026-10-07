@@ -27,7 +27,8 @@
                         <button id="rtlToggle" class="theme-toggle" aria-label="Toggle RTL">
                             <span class="fw-bold" style="font-size: 0.8rem;">RTL</span>
                         </button>
-                        <a href="contact.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex px-4">Start a Project</a>
+                        <a href="login.html" class="clay-btn d-none d-xl-inline-flex unauth-link px-4">Login</a>
+                        <a href="register.html" class="clay-btn clay-btn-primary d-none d-xl-inline-flex unauth-link px-4">Sign Up</a>
                     </div>
                 <button class="navbar-toggler theme-toggle d-xl-none ms-1 order-xl-4 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                     <i class="bi bi-list fs-4"></i>
@@ -65,8 +66,9 @@
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link fs-5 mb-2" href="contact.html">Contact</a></li>
             </ul>
-            <div class="d-grid gap-3">
-                <a href="contact.html" class="clay-btn clay-btn-primary w-100">Start a Project</a>
+            <div class="d-grid gap-3" id="mobileAuthContainer">
+                <a href="login.html" class="clay-btn w-100 unauth-link">Login</a>
+                <a href="register.html" class="clay-btn clay-btn-primary w-100 unauth-link">Sign Up</a>
             </div>
         </div>
     </div>
@@ -80,37 +82,21 @@
                 <!-- Main Article -->
                 <div class="col-lg-8 pe-lg-5 mb-5 mb-lg-0">
                     <article>
-                        <span class="text-primary fw-semibold small">WEB DESIGN</span>
-                        <h1 class="heading-xl mt-2 mb-4">The Future of UI Design in 2026</h1>
+                        <span class="text-primary fw-semibold small" id="blog-category">Loading...</span>
+                        <h1 class="heading-xl mt-2 mb-4" id="blog-title">Loading...</h1>
                         
                         <div class="d-flex align-items-center gap-4 text-muted-clay small mb-5">
                             <div class="d-flex align-items-center gap-2">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
-                                <span class="fw-bold">Marcus Wright</span>
+                                <img src="" id="blog-author-img" alt="Author" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover; display: none;" onload="this.style.display='block'">
+                                <span class="fw-bold" id="blog-author">Loading...</span>
                             </div>
-                            <div><i class="bi bi-calendar3 me-1"></i> Sep 04, 2026</div>
-                            <div><i class="bi bi-clock me-1"></i> 5 min read</div>
+                            <div id="blog-date"><i class="bi bi-calendar3 me-1"></i> Loading...</div>
+                            <div id="blog-readtime"><i class="bi bi-clock me-1"></i> Loading...</div>
                         </div>
 
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Blog Feature" class="img-fluid mb-5 w-100" style="height: 500px; object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer);">
+                        <img src="" id="blog-image" alt="Blog Feature" class="img-fluid mb-5 w-100" style="height: 500px; object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer); display: none;" onload="this.style.display='block'">
 
-                        <div class="article-content fs-5 text-muted-clay">
-                            <p class="mb-4">The landscape of user interface design is constantly evolving, but 2026 has brought unprecedented shifts in how we interact with digital products. Driven by advanced CSS capabilities and the demand for tactile digital experiences, we are seeing a resurgence of soft 3D interfaces.</p>
-                            
-                            <h3 class="fw-bold text-reset mt-5 mb-4">The Rise of Claymorphism</h3>
-                            <p class="mb-4">Claymorphism is characterized by soft, fluffy 3D elements achieved through multiple inner and outer box shadows. Unlike Neumorphism which felt flat and lacked accessibility, Claymorphism provides depth, approachability, and excellent contrast.</p>
-                            
-                            <blockquote class="clay-card my-5 border-start border-primary border-4 p-4 fs-4 text-reset fst-italic d-flex align-items-start gap-3">
-                                <i class="bi bi-quote fs-1 text-primary" style="line-height: 1;"></i>
-                                <div>
-                                    "Design is not just what it looks like and feels like. Design is how it works. But when it looks like clay, it feels magical."
-                                </div>
-                            </blockquote>
-                            
-                            <h3 class="fw-bold text-reset mt-5 mb-4">Accessibility First</h3>
-                            <p class="mb-4">As we push visual boundaries, accessibility remains paramount. WCAG 2.2 guidelines enforce stricter contrast ratios, meaning our beautiful fluffy buttons must also be perfectly legible for all users.</p>
-                        </div>
-
+                        <div class="article-content fs-5 text-muted-clay" id="blog-content"></div>
                         <div class="d-flex align-items-center gap-3 mt-5 pt-4 border-top border-secondary-subtle">
                             <span class="fw-bold">Share:</span>
                             <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
@@ -135,17 +121,17 @@
                         <div class="clay-card p-4 mb-4">
                             <h5 class="fw-bold mb-3">Categories</h5>
                             <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                                <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">Web Design <span class="badge bg-primary rounded-pill">12</span></a></li>
+                                <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">MARKETING <span class="badge bg-primary rounded-pill">12</span></a></li>
                                 <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">Development <span class="badge bg-primary rounded-pill">8</span></a></li>
                                 <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">SEO <span class="badge bg-primary rounded-pill">5</span></a></li>
                                 <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">Marketing <span class="badge bg-primary rounded-pill">14</span></a></li>
                             </ul>
                         </div>
                         
-                        <div class="clay-card p-4 bg-primary text-white text-center blog-details-cta" style="box-shadow: 8px 8px 16px rgba(78, 101, 255, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.2);">
-                            <h5 class="fw-bold text-white mb-3">Need a new website?</h5>
+                        <div class="clay-card p-4 text-center blog-details-cta">
+                            <h5 class="fw-bold mb-3">Need a new website?</h5>
                             <p class="small mb-4">Let our experts help you build a high-converting digital experience.</p>
-                            <a href="contact.html" class="clay-btn text-primary bg-white w-100 blog-details-contact">Contact Us</a>
+                            <a href="contact.html" class="clay-btn clay-btn-primary w-100 blog-details-contact">Contact Us</a>
                         </div>
                         
                     </aside>
@@ -159,7 +145,7 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4 pe-lg-5">
                     <a class="navbar-brand fw-bold fs-4 d-block mb-4" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-2 pb-1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>NEXOVA</a>
-                    <p class="text-muted-clay mb-4">A premium web design and digital marketing agency dedicated to growing ambitious brands.</p>
+                    <p class="text-muted-clay mb-4">A premium MARKETING and digital marketing agency dedicated to growing ambitious brands.</p>
                     <div class="d-flex gap-3">
                         <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
                         <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
@@ -178,10 +164,10 @@
                 <div class="col-6 col-lg-3">
                     <h5 class="mb-4 fw-bold">Services</h5>
                     <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li><a href="service-details.html" class="text-muted-clay text-decoration-none">Web Design</a></li>
-                        <li><a href="service-details-2.html" class="text-muted-clay text-decoration-none">Web Development</a></li>
-                        <li><a href="service-details-3.html" class="text-muted-clay text-decoration-none">SEO Optimization</a></li>
-                        <li><a href="service-details-5.html" class="text-muted-clay text-decoration-none">Digital Marketing</a></li>
+                        <li><a href="service-details.html" class="text-muted-clay text-decoration-none">MARKETING</a></li>
+                        <li><a href="service-details.html" class="text-muted-clay text-decoration-none">Web Development</a></li>
+                        <li><a href="service-details.html" class="text-muted-clay text-decoration-none">SEO Optimization</a></li>
+                        <li><a href="service-details.html" class="text-muted-clay text-decoration-none">Digital Marketing</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -209,8 +195,11 @@
     <script src="assets/js/storage.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog.js"></script>
 </body>
 </html>
+
+
 
 
 

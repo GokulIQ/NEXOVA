@@ -81,11 +81,12 @@
                 <nav aria-label="breadcrumb" class="mb-4 d-flex justify-content-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="portfolio.html" class="text-decoration-none text-muted-clay">Portfolio</a></li>
-                        <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">Fintech App Redesign</li>
+                        <li class="breadcrumb-item active text-primary fw-bold" aria-current="page" id="port-breadcrumb">Loading...</li>
                     </ol>
                 </nav>
-                <h1 class="heading-xl mb-5">FINTECH APP REDESIGN</h1>
-                <img src="./assets/portfolio-1.jpg" alt="Fintech Project Hero" class="img-fluid w-100 mb-5" style="height: 500px; object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer);">
+                <h1 class="heading-xl mb-4" id="port-title">Loading...</h1>
+                <p class="fs-5 text-muted-clay mx-auto mb-5" id="port-description" style="max-width: 850px;"></p>
+                <img id="port-image" alt="" class="img-fluid w-100 mb-5" style="height: clamp(260px, 38vw, 500px); object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer); display: none;" onload="this.style.display='block'">
             </div>
         </section>
 
@@ -94,19 +95,19 @@
                 <div class="row g-4 text-center text-md-start" data-aos="fade-up">
                     <div class="col-6 col-md-3">
                         <span class="text-muted-clay small fw-semibold d-block mb-1">CLIENT</span>
-                        <span class="fw-bold fs-5">PayFlow Inc.</span>
+                        <span class="fw-bold fs-5" id="port-client">Loading...</span>
                     </div>
                     <div class="col-6 col-md-3">
-                        <span class="text-muted-clay small fw-semibold d-block mb-1">INDUSTRY</span>
-                        <span class="fw-bold fs-5">Financial Tech</span>
+                        <span class="text-muted-clay small fw-semibold d-block mb-1">CATEGORY</span>
+                        <span class="fw-bold fs-5" id="port-category">Loading...</span>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <span class="text-muted-clay small fw-semibold d-block mb-1">TECHNOLOGY</span>
+                        <span class="fw-bold fs-5" id="port-technology">Loading...</span>
                     </div>
                     <div class="col-6 col-md-3">
                         <span class="text-muted-clay small fw-semibold d-block mb-1">SERVICES</span>
-                        <span class="fw-bold fs-5">UI/UX, Frontend</span>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <span class="text-muted-clay small fw-semibold d-block mb-1">WEBSITE</span>
-                        <a href="#" class="fw-bold fs-5 text-primary text-decoration-none">payflow.com</a>
+                        <span class="fw-bold fs-5" id="port-services">Loading...</span>
                     </div>
                 </div>
             </div>
@@ -117,22 +118,14 @@
                 <div class="row">
                     <div class="col-lg-8" data-aos="fade-right">
                         <h3 class="fw-bold mb-4">Project Overview</h3>
-                        <p class="text-muted-clay fs-5 mb-4">PayFlow came to us with a dated application that was suffering from low user retention. The goal was to completely redesign the user interface and overhaul the frontend architecture to create a seamless, modern experience.</p>
+                        <p class="text-muted-clay fs-5 mb-4" id="port-overview">Loading...</p>
                         
                         <h4 class="fw-bold mt-5 mb-3">The Challenge</h4>
-                        <p class="text-muted-clay mb-4">The main challenge was simplifying a complex set of financial tools into an intuitive dashboard without hiding critical data from power users.</p>
+                        <p class="text-muted-clay mb-4" id="port-challenge">Loading...</p>
                         
                         <h4 class="fw-bold mt-5 mb-3">The Solution</h4>
-                        <p class="text-muted-clay mb-5">We implemented a clean Claymorphism design system to give the interface depth while maintaining accessibility. Complex charts were broken down into digestible widgets.</p>
+                        <p class="text-muted-clay mb-5" id="port-solution">Loading...</p>
 
-                        <div class="row g-4 mb-5">
-                            <div class="col-md-6">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mockup 1" class="img-fluid w-100" style="border-radius: var(--clay-radius); box-shadow: var(--clay-shadow-outer);">
-                            </div>
-                            <div class="col-md-6">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mockup 2" class="img-fluid w-100" style="border-radius: var(--clay-radius); box-shadow: var(--clay-shadow-outer);">
-                            </div>
-                        </div>
                     </div>
 
                     <div class="col-lg-4" data-aos="fade-left">
@@ -140,16 +133,16 @@
                             <h4 class="fw-bold mb-4">The Results</h4>
                             
                             <div class="mb-4">
-                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);">+145%</h2>
-                                <span class="text-muted-clay fw-semibold">User Retention</span>
+                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);" id="port-metric1">...</h2>
+                                <span class="text-muted-clay fw-semibold" id="port-metric1-label">Loading</span>
                             </div>
                             <div class="mb-4">
-                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);">-40%</h2>
-                                <span class="text-muted-clay fw-semibold">Bounce Rate</span>
+                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);" id="port-metric2">...</h2>
+                                <span class="text-muted-clay fw-semibold" id="port-metric2-label">Loading</span>
                             </div>
                             <div>
-                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);">+61%</h2>
-                                <span class="text-muted-clay fw-semibold">Conversion Rate</span>
+                                <h2 class="display-4 fw-bold text-primary mb-0" style="font-family: var(--font-primary);" id="port-metric3">...</h2>
+                                <span class="text-muted-clay fw-semibold" id="port-metric3-label">Loading</span>
                             </div>
                         </div>
                     </div>
@@ -227,6 +220,8 @@
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
     <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="assets/js/portfolio-data.js"></script>
+    <script src="assets/js/portfolio-details.js"></script>
 </body>
 </html>
 
