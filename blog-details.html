@@ -12,6 +12,16 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
     <link href="assets/css/rtl.css" rel="stylesheet">
+    <style>
+        .article-content { line-height: 1.8; }
+        .article-content h2 { font-size: clamp(1.35rem, 2.5vw, 1.8rem); }
+        .article-content li { padding-inline-start: .25rem; }
+        .article-content .clay-card { font-size: 1rem; line-height: 1.65; }
+        .blog-related-card { transition: transform .25s ease; }
+        .blog-related-card:hover { transform: translateY(-4px); }
+        @media (max-width: 991.98px) { .blog-details-sidebar { position: static !important; } }
+        @media (prefers-reduced-motion: reduce) { .blog-related-card { transition: none; } }
+    </style>
 </head>
 <body>
 
@@ -82,49 +92,62 @@
                 <!-- Main Article -->
                 <div class="col-lg-8 pe-lg-5 mb-5 mb-lg-0">
                     <article>
-                        <span class="text-primary fw-semibold small" id="blog-category">Loading...</span>
-                        <h1 class="heading-xl mt-2 mb-4" id="blog-title">Loading...</h1>
+                        <nav aria-label="breadcrumb" class="mb-4">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-muted-clay">Home</a></li>
+                                <li class="breadcrumb-item"><a href="blog.html" class="text-muted-clay">Blog</a></li>
+                                <li class="breadcrumb-item active text-primary fw-bold" id="blog-article-crumb" aria-current="page">Article</li>
+                            </ol>
+                        </nav>
+                        <span class="text-primary fw-semibold small" id="blog-category">Article</span>
+                        <h1 class="heading-xl mt-2 mb-4" id="blog-title">Article</h1>
                         
-                        <div class="d-flex align-items-center gap-4 text-muted-clay small mb-5">
+                        <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4 text-muted-clay small mb-5">
                             <div class="d-flex align-items-center gap-2">
-                                <img src="" id="blog-author-img" alt="Author" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover; display: none;" onload="this.style.display='block'">
-                                <span class="fw-bold" id="blog-author">Loading...</span>
+                                <img id="blog-author-img" alt="" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover; display: none;">
+                                <span class="fw-bold" id="blog-author">NEXOVA Editorial Team</span>
                             </div>
-                            <div id="blog-date"><i class="bi bi-calendar3 me-1"></i> Loading...</div>
-                            <div id="blog-readtime"><i class="bi bi-clock me-1"></i> Loading...</div>
+                            <div><i class="bi bi-calendar3 me-1"></i><span id="blog-date">Published</span></div>
+                            <div><i class="bi bi-clock me-1"></i><span id="blog-readtime">Read time</span></div>
                         </div>
 
-                        <img src="" id="blog-image" alt="Blog Feature" class="img-fluid mb-5 w-100" style="height: 500px; object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer); display: none;" onload="this.style.display='block'">
+                        <img id="blog-image" alt="" class="img-fluid mb-5 w-100" style="height: clamp(260px, 42vw, 500px); object-fit: cover; border-radius: var(--clay-radius-lg); box-shadow: var(--clay-shadow-outer);">
 
                         <div class="article-content fs-5 text-muted-clay" id="blog-content"></div>
                         <div class="d-flex align-items-center gap-3 mt-5 pt-4 border-top border-secondary-subtle">
                             <span class="fw-bold">Share:</span>
-                            <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
-                            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
-                            <a href="login.html" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                            <a id="share-x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                            <a id="share-linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
+                            <a id="share-facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="clay-btn p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
                         </div>
+                        <nav class="d-flex flex-column flex-sm-row justify-content-between gap-3 mt-4" aria-label="Article navigation">
+                            <a id="previous-article" class="clay-btn" href="blog.html">Previous Article</a>
+                            <a id="next-article" class="clay-btn" href="blog.html">Next Article</a>
+                        </nav>
                     </article>
                 </div>
 
                 <!-- Sidebar -->
                 <div class="col-lg-4">
-                    <aside class="sticky-top" style="top: 120px;">
+                    <aside class="sticky-top blog-details-sidebar" style="top: 120px;">
                         
                         <div class="clay-card p-4 mb-4">
                             <h5 class="fw-bold mb-3">Search</h5>
-                            <div class="position-relative">
-                                <input type="text" class="clay-input pe-5" aria-label="Search..." placeholder="Search...">
-                                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted-clay"></i>
-                            </div>
+                            <form id="blog-detail-search" role="search">
+                                <label class="visually-hidden" for="blog-detail-search-input">Search articles</label>
+                                <div class="position-relative">
+                                    <input type="search" id="blog-detail-search-input" class="clay-input pe-5" placeholder="Search articles...">
+                                    <button type="submit" class="btn border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-2 text-muted-clay" aria-label="Search"><i class="bi bi-search"></i></button>
+                                </div>
+                            </form>
                         </div>
                         
                         <div class="clay-card p-4 mb-4">
                             <h5 class="fw-bold mb-3">Categories</h5>
                             <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                                <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">MARKETING <span class="badge bg-primary rounded-pill">12</span></a></li>
-                                <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">Development <span class="badge bg-primary rounded-pill">8</span></a></li>
-                                <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">SEO <span class="badge bg-primary rounded-pill">5</span></a></li>
-                                <li><a href="#" class="text-muted-clay text-decoration-none d-flex justify-content-between">Marketing <span class="badge bg-primary rounded-pill">14</span></a></li>
+                                <li><a href="blog.html?category=marketing#blogGrid" class="text-muted-clay text-decoration-none">MARKETING</a></li>
+                                <li><a href="blog.html?category=web-design#blogGrid" class="text-muted-clay text-decoration-none">WEB DESIGN</a></li>
+                                <li><a href="blog.html?category=seo#blogGrid" class="text-muted-clay text-decoration-none">SEO</a></li>
                             </ul>
                         </div>
                         
@@ -137,6 +160,10 @@
                     </aside>
                 </div>
             </div>
+            <section class="pt-4 pb-5" aria-labelledby="related-heading">
+                <h2 class="fw-bold mb-4" id="related-heading">Related Articles</h2>
+                <div class="row g-4" id="related-articles"></div>
+            </section>
         </div>
     </main>
 

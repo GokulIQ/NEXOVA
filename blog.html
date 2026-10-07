@@ -96,7 +96,7 @@
         <section class="pt-0 pb-5">
             <div class="container">
                                                 <!-- Featured Post -->
-                <div class="row mb-5 pb-4 border-bottom border-secondary-subtle" id="featuredPost" data-title="The Future of UI Design in 2026">
+                <div class="row mb-5 pb-4 border-bottom border-secondary-subtle" id="featuredPost" data-blog-id="ui-design-2026" data-category="web-design" data-title="The Future of UI Design in 2026">
                     <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
                         <div class="overflow-hidden" style="border-radius: var(--clay-radius-lg);">
                             <img src="./assets/service_ui_ux.jpg" alt="UI Design 2026" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
@@ -126,7 +126,7 @@
                 <div class="row g-5" id="blogGrid">
     
     <!-- Article 1 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="Maximizing ROI with Social Media">
+    <div class="col-md-6 col-lg-4 blog-post" data-blog-id="social-media-roi" data-category="marketing" data-title="Maximizing ROI with Social Media">
         <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
             <img src="./assets/service_ads.jpg" alt="Social Media ROI" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
             <div class="p-4 d-flex flex-column flex-grow-1">
@@ -149,7 +149,7 @@
     </div>
     
     <!-- Article 2 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="Core Web Vitals and Search Rankings">
+    <div class="col-md-6 col-lg-4 blog-post" data-blog-id="core-web-vitals" data-category="seo" data-title="Core Web Vitals and Search Rankings">
         <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
             <img src="./assets/Web Development.jpg" alt="Web performance and development across devices" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
             <div class="p-4 d-flex flex-column flex-grow-1">
@@ -172,7 +172,7 @@
     </div>
 
     <!-- Article 3 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="Building Scalable Frontend Architectures">
+    <div class="col-md-6 col-lg-4 blog-post" data-category="engineering" data-title="Building Scalable Frontend Architectures">
         <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
             <img src="./assets/service_web_dev.jpg" alt="Frontend Architectures" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
             <div class="p-4 d-flex flex-column flex-grow-1">
@@ -195,7 +195,7 @@
     </div>
 
     <!-- Article 4 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="Mastering Typography in Web Design">
+    <div class="col-md-6 col-lg-4 blog-post" data-category="web-design" data-title="Mastering Typography in Web Design">
         <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
             <img src="./assets/service_ux.jpg" alt="Typography and web design" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
             <div class="p-4 d-flex flex-column flex-grow-1">
@@ -218,7 +218,7 @@
     </div>
     
     <!-- Article 5 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="The Power of Local SEO">
+    <div class="col-md-6 col-lg-4 blog-post" data-category="seo" data-title="The Power of Local SEO">
         <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
             <img src="./assets/service_seo.jpg" alt="SEO strategy and search visibility" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
             <div class="p-4 d-flex flex-column flex-grow-1">
@@ -241,7 +241,7 @@
     </div>
     
     <!-- Article 6 -->
-    <div class="col-md-6 col-lg-4 blog-post" data-title="The Role of Generative AI in Creative Agencies">
+    <div class="col-md-6 col-lg-4 blog-post" data-category="innovation" data-title="The Role of Generative AI in Creative Agencies">
         <div class="clay-card h-100 p-0 d-flex flex-column overflow-hidden">
             <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Generative AI" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
             <div class="p-4 d-flex flex-column flex-grow-1">
@@ -327,6 +327,7 @@
     <script src="assets/js/storage.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
 
@@ -335,22 +336,30 @@
             const featuredPost = document.getElementById('featuredPost');
             const posts = document.querySelectorAll('#blogGrid .blog-post');
             const noResults = document.getElementById('noResults');
+            const params = new URLSearchParams(window.location.search);
+            const initialQuery = params.get('q') || '';
+            const selectedCategory = params.get('category') || '';
 
             if (!searchInput || !noResults) return;
+            searchInput.value = initialQuery;
 
-            searchInput.addEventListener('input', () => {
+            const filterPosts = () => {
                 const term = searchInput.value.trim().toLocaleLowerCase();
                 let visibleCount = 0;
 
                 [featuredPost, ...posts].forEach(post => {
                     if (!post) return;
-                    const matches = `${post.dataset.title || ''} ${post.textContent}`.toLocaleLowerCase().includes(term);
+                    const matchesTerm = `${post.dataset.title || ''} ${post.textContent}`.toLocaleLowerCase().includes(term);
+                    const matchesCategory = !selectedCategory || post.dataset.category === selectedCategory;
+                    const matches = matchesTerm && matchesCategory;
                     post.hidden = !matches;
                     if (matches) visibleCount++;
                 });
 
                 noResults.classList.toggle('d-none', visibleCount > 0);
-            });
+            };
+            searchInput.addEventListener('input', filterPosts);
+            filterPosts();
         });
     </script>
 </body>
