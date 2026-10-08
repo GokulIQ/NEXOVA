@@ -125,20 +125,21 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="firstName" class="form-label text-muted-clay small fw-semibold">First Name *</label>
-                            <input type="text" class="clay-input" id="firstName" required>
-                                        <div class="invalid-feedback">Please enter your first name.</div>
+                                        <input type="text" class="clay-input" id="firstName" name="firstName" autocomplete="given-name" minlength="3" maxlength="80" pattern="(?=(?:[^\p{L}]*\p{L}){3})\p{L}[\p{L}\p{M}]*(?:[ '\-’]\p{L}[\p{L}\p{M}]*)*" aria-describedby="firstName-error" required>
+                                        <div class="invalid-feedback" id="firstName-error">Enter at least three letters. Spaces, hyphens and apostrophes are allowed; numbers are not.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="lastName" class="form-label text-muted-clay small fw-semibold">Last Name *</label>
-                            <input type="text" class="clay-input" id="lastName" required>
+                                        <input type="text" class="clay-input" id="lastName" name="lastName" autocomplete="family-name" minlength="3" maxlength="80" pattern="(?=(?:[^\p{L}]*\p{L}){3})\p{L}[\p{L}\p{M}]*(?:[ '\-’]\p{L}[\p{L}\p{M}]*)*" aria-describedby="lastName-error" required>
+                                        <div class="invalid-feedback" id="lastName-error">Enter at least three letters. Spaces, hyphens and apostrophes are allowed; numbers are not.</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="email" class="form-label text-muted-clay small fw-semibold">Email Address *</label>
-                            <input type="email" class="clay-input" id="email" required>
-                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                        <input type="email" class="clay-input" id="email" name="email" autocomplete="email" maxlength="254" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`\{\|\}~\-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+\/=?^_`\{\|\}~\-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63}" aria-describedby="email-error" required>
+                                        <div class="invalid-feedback" id="email-error">Enter a valid email address, such as name@example.com.</div>
                                     </div>
                                     <div class="col-12">
-                                        <label class="form-label text-muted-clay small fw-semibold">Service Needed *</label>
+                                        <label for="service" class="form-label text-muted-clay small fw-semibold">Service Needed *</label>
                                         <select class="clay-input form-select" id="service" required>
                                             <option value="">Select a service...</option>
                                             <option value="web-design">Web Design</option>
@@ -146,6 +147,7 @@
                                             <option value="seo">SEO Optimization</option>
                                             <option value="marketing">Digital Marketing</option>
                                         </select>
+                                        <div class="invalid-feedback">Please select a service.</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="message" class="form-label text-muted-clay small fw-semibold">Project Details *</label>

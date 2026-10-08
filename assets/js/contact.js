@@ -7,9 +7,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const successMsg = document.getElementById('contact-success');
 
     if (contactForm) {
+        const fields = contactForm.querySelectorAll('input, select, textarea');
+        const trimmedFields = contactForm.querySelectorAll('input[type="text"], input[type="email"]');
+
+        fields.forEach((field) => {
+            field.addEventListener('input', () => {
+                successMsg.classList.add('d-none');
+                if (contactForm.classList.contains('was-validated')) {
+                    field.setAttribute('aria-invalid', String(!field.validity.valid));
+                }
+            });
+        });
+        trimmedFields.forEach((field) => {
+            field.addEventListener('blur', () => {
+                field.value = field.value.trim();
+                if (contactForm.classList.contains('was-validated')) {
+                    field.setAttribute('aria-invalid', String(!field.validity.valid));
+                }
+            });
+        });
+
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             e.stopPropagation();
+            successMsg.classList.add('d-none');
+            trimmedFields.forEach((field) => {
+                field.value = field.value.trim();
+            });
 
             if (contactForm.checkValidity()) {
                 // Form is valid
@@ -31,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 successMsg.classList.remove('d-none');
                 contactForm.reset();
                 contactForm.classList.remove('was-validated');
+                fields.forEach((field) => field.removeAttribute('aria-invalid'));
                 
                 // Hide success message after 5 seconds
                 setTimeout(() => {
@@ -39,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } else {
                 contactForm.classList.add('was-validated');
+                fields.forEach((field) => {
+                    field.setAttribute('aria-invalid', String(!field.validity.valid));
+                });
+                contactForm.querySelector(':invalid').focus();
             }
         });
     }

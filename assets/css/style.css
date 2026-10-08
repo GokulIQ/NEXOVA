@@ -189,6 +189,23 @@ a:hover {
     color: var(--clr-text-muted);
 }
 
+.was-validated .clay-input:invalid {
+    box-shadow: var(--clay-shadow-inner), 0 0 0 2px #b42332;
+}
+
+.was-validated .clay-input:invalid ~ .invalid-feedback {
+    display: block;
+    color: #b42332;
+}
+
+[data-theme="dark"] .was-validated .clay-input:invalid {
+    box-shadow: var(--clay-shadow-inner), 0 0 0 2px #ff9da5;
+}
+
+[data-theme="dark"] .was-validated .clay-input:invalid ~ .invalid-feedback {
+    color: #ff9da5;
+}
+
 /* Typography Helpers */
 .text-muted-clay {
     color: var(--clr-text-muted);

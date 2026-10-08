@@ -20,8 +20,13 @@
     }
 }
 
-/* Custom fix for services text wrapping on LG devices */
+/* Tablet navbar spacing and services text wrapping */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .clay-header .navbar-expand-xl > .navbar-toggler {
+        margin-inline-start: 1rem !important;
+        margin-inline-end: 0 !important;
+    }
+
     .services-section .clay-card h4.text-nowrap {
         font-size: 1.1rem;
     }
